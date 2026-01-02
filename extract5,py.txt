@@ -1,0 +1,72 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+import traceback
+
+def extract_question_content(driver):
+    """Extract main question content from the ExamTopics page."""
+    try:
+        question_container = WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "div.discussion-content, div.content, div.question, div.post-content")
+            )
+        )
+        text = question_container.text.strip()
+        if text:
+            return text
+    except Exception as e:
+        print(f"Primary selector failed: {e}")
+        traceback.print_exc()
+    
+    # Fallback: grab all visible text in body
+    try:
+        body = driver.find_element(By.TAG_NAME, "body")
+        return body.text.strip()
+    except Exception as e:
+        print(f"Fallback extraction failed: {e}")
+        traceback.print_exc()
+        return ""
+
+def main():
+    # Selenium options
+    options = Options()
+    options.add_argument("--start-maximized")
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/140.0.0.0 Safari/537.36"
+    )
+    # options.add_argument("--headless=new")  # Uncomment for headless mode
+
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+    for qnum in range(21, 31):
+        try:
+            exam_link = f"https://www.examtopics.com/discussions/snowpro-core/question-{qnum}/"
+            print(f"\n--- Processing question {qnum} ---")
+            print(f"Opening ExamTopics link: {exam_link}")
+            
+            driver.get(exam_link)
+
+            # Wait a few seconds for content to load
+            time.sleep(2)
+
+            content = extract_question_content(driver)
+            if content:
+                print(f"\nQuestion {qnum} content (first 1000 chars):\n{content[:1000]}")
+            else:
+                print(f"Question content not found for question {qnum}")
+
+        except Exception as e:
+            print(f"Error processing question {qnum}: {e}")
+            traceback.print_exc()
+
+    driver.quit()
+
+if __name__ == "__main__":
+    main()

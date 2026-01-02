@@ -1,0 +1,80 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 26 DISCUSSION
+
+Question:
+Which of the following statements are true of Virtual Warehouses? (Choose all that apply.)
+A. Customers can change the size of the Warehouse after creation
+B. A Warehouse can be resized while running
+C. A Warehouse can be configured to suspend after a period of inactivity
+D. A Warehouse can be configured to auto-resume when new queries are submitted
+Show Suggested Answer
+
+Choices:
+1. A. Customers can change the size of the Warehouse after creation
+2. B. A Warehouse can be resized while running
+3. C. A Warehouse can be configured to suspend after a period of inactivity
+4. D. A Warehouse can be configured to auto-resume when new queries are submitted
+
+Answers/Comments (20 found):
+1. all fours are true
+
+2. Correct, you can configure auto suspend and auto resume: 
+https://docs.snowflake.com/en/user-guide/warehouses-considerations#automating-warehouse-suspension
+AND you can resize a wh even when it is running: https://docs.snowflake.com/en/user-guide/warehouses-overview
+
+3. Additionally, multi-cluster warehouses support all the same properties and actions as single-cluster warehouses, including:
+
+Specifying a warehouse size.
+
+Resizing a warehouse at any time.
+
+Auto-suspending a running warehouse due to inactivity; note that this does not apply to individual clusters, but rather the entire multi-cluster warehouse.
+
+Auto-resuming a suspended warehouse when new queries are submitted.
+
+4. https://docs.snowflake.com/en/user-guide/warehouses-overview
+
+5. All four are True
+
+6. all fours are true
+
+7. ABCD are true
+
+8. Actually A,B,C,D all are correct
+
+9. All four are true 
+
+
+A: resizing allowed
+B: Dynamic Scaling allowed 
+C , D : Auto resume and auto suspends are also standard warehouse features
+
+10. All four are true
+
+11. all are true
+
+12. All are true
+
+13. all true, not only two
+
+14. All four are correct, but only two are allowed to be selected by this question. That needs to be fixed.
+
+15. all fours are true
+
+16. all the answers are correct
+
+17. four are all true
+
+18. All of the following statements are true of Virtual Warehouses in Snowflake:
+
+A. Customers can change the size of the Warehouse after creation: You can resize a warehouse at any time to adjust the compute resources.
+
+B. A Warehouse can be resized while running: Warehouses can be resized even while they are running to accommodate changing workloads.
+
+C. A Warehouse can be configured to suspend after a period of inactivity: You can set a warehouse to automatically suspend after a specified period of inactivity to save costs.
+
+D. A Warehouse can be configured to auto-resume when new queries are submitted: Warehouses can be configured to automatically resume when new queries are submitted, ensuring that compute resources are available when needed.
+
+19. All are correct ABCD
+
+20. all fours are true, BUT the question only allows to pick up two options
+

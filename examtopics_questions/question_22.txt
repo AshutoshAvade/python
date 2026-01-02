@@ -1,0 +1,35 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 22 DISCUSSION
+
+Question:
+True or False: It is possible to unload structured data to semi-structured formats such as JSON and Parquet.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (11 found):
+1. A is correct: https://docs.snowflake.com/en/user-guide/data-unload-considerations.html#unloading-a-relational-table-to-json
+
+2. True is correct
+
+3. A.True
+
+4. A True
+
+5. A True
+
+6. A is correct
+
+7. A is correct
+
+8. A is correct
+
+9. True. Correct Answer.
+
+10. CSV is also an option!
+
+11. A is the correct answer
+

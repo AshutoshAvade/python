@@ -1,0 +1,103 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 30 DISCUSSION
+
+Question:
+When a Pipe is recreated using the CREATE OR REPLACE PIPE command:
+A. The Pipe load history is reset to empty
+B. The REFRESH parameter is set to TRUE
+C. Previously loaded files will be ignored
+D. All of the above
+Show Suggested Answer
+
+Choices:
+1. A. The Pipe load history is reset to empty
+2. B. The REFRESH parameter is set to TRUE
+3. C. Previously loaded files will be ignored
+4. D. All of the above
+
+Answers/Comments (17 found):
+1. I believe the correct answer is A. 
+
+REFRESH is a parameter for ALTER PIPE 
+https://docs.snowflake.com/en/sql-reference/sql/alter-pipe.html
+
+It is NOT a parameter for CREATE [OR REPLACE] Pipe. 
+https://docs.snowflake.com/en/sql-reference/sql/create-pipe.html 
+
+Further recreating a pipe resets history: 
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-manage.html#label-snowpipe-management-recreate-pipes
+
+"Load History
+The load history for Snowpipe operations is stored in the metadata of the pipe object. When a pipe is recreated, the load history is dropped. In general, this condition only affects users if they subsequently execute an ALTER PIPE … REFRESH statement on the pipe. Doing so could load duplicate data from staged files in the storage location for the pipe if the data was already loaded successfully and the files were not deleted subsequently."
+
+2. B, C have not Snowflake document to support that, ChatGPT shows D, but after deeper asks, CHATGPT shows that it has no document support options B and C.
+
+3. D. All of the above the correct answer
+
+4. Answer from Gemini
+
+When a Pipe is recreated using the CREATE OR REPLACE PIPE command in Snowflake, the following occurs: 
+The Pipe load history is reset to empty.
+This means the pipe will no longer track files that were previously loaded by the old pipe definition.
+The REFRESH parameter is automatically set to TRUE.
+This ensures that the newly created pipe will immediately begin looking for new files in the specified stage location.
+Previously loaded files will be ignored.
+Since the load history is reset and REFRESH is enabled, the pipe will not reprocess files that were already successfully loaded by the previous pipe definition.
+Therefore, the correct answer is D. All of the above.
+
+5. D is correct answer
+
+6. it seems that none is correct
+
+7. When a Pipe is recreated using the CREATE OR REPLACE PIPE command in Snowflake, the following happens:
+
+A. The Pipe load history is reset to empty
+
+True: When you recreate a pipe, Snowflake resets the load history associated with that pipe. This means that the system no longer has any record of files that have been previously loaded through that pipe.
+
+B. The REFRESH parameter is set to TRUE
+
+True: When you recreate the pipe, the REFRESH parameter is set to TRUE by default. This ensures that Snowflake will reprocess the files that are staged for loading, allowing the pipe to refresh its state and start processing new data again.
+
+C. Previously loaded files will be ignored
+
+True: After the CREATE OR REPLACE PIPE operation, previously loaded files (files that were ingested before the pipe was replaced) will be ignored. This is because the pipe's state is reset, and Snowflake does not automatically track the files that have been processed before the pipe was replaced.
+
+8. The answers are A and C, but the question only allows one option to be selected.
+
+Previously loaded files will be ignored unless an ALTER PIPE... REFRESH is executed:
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-manage#label-snowpipe-management-recreate-pipes
+
+Refresh is not an option when creating a pipe:
+https://docs.snowflake.com/en/sql-reference/sql/create-pipe
+
+9. D
+Snowflake clears the load history for the pipe.
+Setting REFRESH = TRUE tells Snowflake to re-evaluate the staged files.
+Snowpipe uses the new pipe definition and skips previously processed files,
+
+10. A is correct
+
+11. Correct answer is A,C
+
+12. Answer is A
+The pipe load history is set to empty.
+
+The load history for Snowpipe operations is stored in the metadata of the pipe object. When a pipe is recreated, the load history is dropped.In general, this condition only affects users if they subsequently execute an ALTER PIPE … REFRESH statement on the pipe. Doing so could load duplicate data from staged files in the storage location for the pipe if the data was already loaded successfully and the files were not deleted subsequently.
+
+13. when recreating a pipe with CREATE OR REPLACE PIPE, all these behaviors apply, making D. All of the above the correct answer
+
+14. D is correct here
+
+15. The correct answer is D. All of the above.
+When a Pipe is recreated using the CREATE OR REPLACE PIPE command:
+
+The Pipe load history is reset to empty (A is true)
+The REFRESH parameter is automatically set to TRUE (B is true)
+Previously loaded files will be ignored (C is true)
+
+Therefore, since all three statements (A, B, and C) are true, D "All of the above" is the correct answer. This is important to understand because recreating a pipe effectively gives you a fresh start - clearing history, refreshing the pipe, and ignoring previously processed files.
+
+16. D - All options (A,B,C) is correct
+
+17. Refresh is used with alter pipe
+

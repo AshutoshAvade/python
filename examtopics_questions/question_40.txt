@@ -1,0 +1,55 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 40 DISCUSSION
+
+Question:
+A deterministic query is run at 8am, takes 5 minutes, and the results are cached. Which of the following statements are true? (Choose two.)
+A. The exact query will ALWAYS return the precomputed result set for the RESULT_CACHE_ACTIVE = time period
+B. The same exact query will return the precomputed results if the underlying data hasn't changed and the results were last accessed within previous 24 hour period
+C. The same exact query will return the precomputed results even if the underlying data has changed as long as the results were last accessed within the previous 24 hour period
+D. The ג€24 hourג€ timer on the precomputed results gets renewed every time the exact query is executed
+Show Suggested Answer
+
+Choices:
+1. A. The exact query will ALWAYS return the precomputed result set for the RESULT_CACHE_ACTIVE = time period
+2. B. The same exact query will return the precomputed results if the underlying data hasn't changed and the results were last accessed within previous 24 hour period
+3. C. The same exact query will return the precomputed results even if the underlying data has changed as long as the results were last accessed within the previous 24 hour period
+4. D. The ג€24 hourג€ timer on the precomputed results gets renewed every time the exact query is executed
+
+Answers/Comments (17 found):
+1. correct answer is B, D
+
+2. b and d are the correct options
+
+3. B & D, cache is only for 24hr, if data doesn't change, and renews TTL if queried again
+
+4. B -Snowflake's result cache will return the precomputed results if the data has not changed and the cached results are still valid (within 24 hours of the last access).
+
+D- Every time the query is executed, the 24-hour timer for the cached results is reset, extending the validity of the cached results.
+
+5. B and D
+
+6. B and D are correct
+
+7. esas son las correctas b y d
+
+8. BD I think, but bad wording on B: "previous" 24 hours would mean before the original query was run, so taken literally this is incorrect but I think they mean the next 24 hours.
+
+9. correct answer is B, D
+
+10. BD
+Explanation for D is here 
+https://docs.snowflake.com/en/user-guide/querying-persisted-results.html
+
+11. BD are correct
+
+12. BD is the correct answer
+
+13. BD for sure
+
+14. Obviously it is B,D by MinuteMaid
+
+15. The results cache will only be used if it's the same query AND the same role executing the query
+
+16. B and D are correct
+
+17. answer BD
+

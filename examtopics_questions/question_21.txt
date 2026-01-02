@@ -1,0 +1,51 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 21 DISCUSSION
+
+Question:
+Which of the following statements describes a benefit of Snowflake's separation of compute and storage? (Choose all that apply.)
+A. Growth of storage and compute are tightly coupled together
+B. Storage expands without the requirement to add more compute
+C. Compute can be scaled up or down without the requirement to add more storage
+D. Multiple compute clusters can access stored data without contention
+Show Suggested Answer
+
+Choices:
+1. A. Growth of storage and compute are tightly coupled together
+2. B. Storage expands without the requirement to add more compute
+3. C. Compute can be scaled up or down without the requirement to add more storage
+4. D. Multiple compute clusters can access stored data without contention
+
+Answers/Comments (17 found):
+1. BCD for sure
+
+2. Snowflake’s separation decouples compute and storage
+
+3. bcd are correct
+
+4. B,C,D ARE CORRECT OPTIONS
+
+5. BCD are correct
+
+6. BCD are correct
+
+7. BCD are correct
+
+8. BCD are correct
+
+9. Is the right answer
+
+10. BCD are the correct options.
+
+11. BCD are the right options
+
+12. BCD is the good answer
+
+13. Answer are BCD
+
+14. BCD, all the three are correct
+
+15. Answer are BCD
+
+16. Answer are BCD
+
+17. Answer are BCD
+

@@ -1,0 +1,63 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 33 DISCUSSION
+
+Question:
+True or False: Snowpipe via REST API can only reference External Stages as source.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (17 found):
+1. Statement is False. Answer B is correct.
+Snowpipe via rest API can refer both external as well as internal stages.
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-rest-overview.html
+
+2. Statement is False. Answer B is correct.
+
+3. false for only external
+
+4. Supports both Internal and External Internal is Snowflake and External is S3 Blob etc
+
+5. The correct answer is A. True
+
+Snowpipe via REST API can only reference External Stages as source. This is a key limitation of using Snowpipe with the REST API. Internal stages cannot be used as a source when using Snowpipe through the REST API interface - you must use external stages. This is an important distinction from other Snowpipe usage patterns.
+
+6. B.False
+
+7. This statement is true because Snowflake, as a cloud-based data warehouse, requires a specific driver to establish a connection. While third-party tools that support standard JDBC (Java Database Connectivity) or ODBC (Open Database Connectivity) protocols theoretically could connect to Snowflake, without a Snowflake-specific driver, they would not be able to establish a connection successfully. Snowflake's architecture and features require a driver that is specifically designed to work with its unique system. Therefore, a third-party tool lacking a Snowflake-specific driver would indeed be unable to connect to Snowflake.
+
+8. B is correct
+
+9. False:
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-rest-gs#step-4-stage-data-files
+Snowpipe supports loading from the following stage types:
+
+Named internal (Snowflake) or external (Amazon S3, Google Cloud Storage, or Microsoft Azure) stages
+
+Table stages
+
+10. https://docs.snowflake.com/en/user-guide/data-load-snowpipe-rest-load
+B) 
+Stage your data files:
+
+Internal stage: Use the PUT command to stage your files.
+
+External stage: Use the client tools provided by the cloud provider to copy your files to the stage location (Amazon S3, Google Cloud Storage, or Microsoft Azure).
+
+11. B is correct
+
+12. Answer will be false
+
+13. B is correct
+
+14. The correct answer is B.
+
+15. Went to https://docs.snowflake.com/en/user-guide/data-load-snowpipe-rest-overview.html . The process flow chart clearly shows internal and external sources being used. The answer is A
+
+16. REST API supports both internal and external but SNOWPIPE AUTO INGEST only support external. so the answer is B
+
+17. answer is false
+

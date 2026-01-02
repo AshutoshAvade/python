@@ -1,0 +1,61 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 27 DISCUSSION
+
+Question:
+The PUT command: (Choose two.)
+A. Automatically creates a File Format object
+B. Automatically uses the last Stage created
+C. Automatically compresses files using Gzip
+D. Automatically encrypts files
+Show Suggested Answer
+
+Choices:
+1. A. Automatically creates a File Format object
+2. B. Automatically uses the last Stage created
+3. C. Automatically compresses files using Gzip
+4. D. Automatically encrypts files
+
+Answers/Comments (17 found):
+1. CD are true
+
+2. CD is true
+
+3. The PUT command in Snowflake automatically compresses files using Gzip and encrypts the files during the transfer process
+
+4. correct answer:CD
+
+5. C. Automatically compresses files using Gzip
+D. Automatically encrypts files
+
+Therefore, the correct options are:
+
+C. Automatically compresses files using Gzip
+D. Automatically encrypts files
+The PUT command in Snowflake compresses files using Gzip by default and encrypts files during the transfer to a stage, ensuring secure and efficient data loading.
+
+6. PUT does not support uploading files to external stages. All files stored on internal stages for data loading and unloading operations are automatically encrypted using AES-256 strong encryption on the server side. By default, Snowflake provides additional client-side encryption with a 128-bit key (with the option to configure a 256-bit key). AUTO_COMPRESS is TRUE by default and by default it uses GZIP.
+
+7. c and d
+
+8. CD are the correct answer!
+
+9. CD are the correct options
+
+10. CD are the correct options
+
+11. CD are the correct options
+
+12. CD are the correct options
+
+13. Uploaded files are automatically encrypted with 128-bit or 256-bit keys. 
+AUTO_COMPRESS is TRUE by default and by default it uses GZIP.
+
+https://docs.snowflake.com/en/sql-reference/sql/put.html
+
+14. CD are correct
+
+15. First we will create a stage and then use PUT to load the data from onprem to that stage. Hence B. And the data will be transferred to the stage and will be encrypted, Hence D. So I guess it should be B and D.
+
+16. CD is correct
+
+17. CD is right answer
+

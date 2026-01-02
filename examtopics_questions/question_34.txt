@@ -1,0 +1,72 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 34 DISCUSSION
+
+Question:
+True or False: A third-party tool that supports standard JDBC or ODBC but has no Snowflake-specific driver will be unable to connect to Snowflake.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (17 found):
+1. Answer is B False:
+
+E.g. JDBC:
+
+https://docs.snowflake.com/en/user-guide/jdbc.html
+
+Snowflake provides a JDBC type 4 driver that supports core JDBC functionality. The JDBC driver must be installed in a 64-bit environment and requires Java 1.8 (or higher). The driver can be used with most client tools/applications that support JDBC for connecting to a database server.
+
+2. False.
+
+A third-party tool that supports standard JDBC or ODBC can connect to Snowflake even without a Snowflake-specific driver. Snowflake provides JDBC and ODBC connectors that adhere to the standard JDBC and ODBC interfaces, allowing third-party tools to establish a connection to Snowflake using these standard protocols.
+
+The Snowflake JDBC and ODBC connectors act as bridges between the third-party tools and the Snowflake service, enabling communication and data exchange. As long as the third-party tool supports JDBC or ODBC, it can utilize the Snowflake connectors to connect to Snowflake and interact with the data warehouse.
+
+This approach ensures compatibility and interoperability with a wide range of tools and applications that support JDBC or ODBC, making it easier to integrate Snowflake into existing ecosystems or use preferred third-party tools for data analysis, reporting, or other purposes.
+
+3. a table can be queried using any Virtual Warehouse, not just the one that loaded the data.
+
+4. yes it is possible to not select a file format
+
+5. SF has driver support for most connectors
+
+6. Answer is False:
+It is mentioned in the official snowflake documentation to 
+use net.snowflake.client.jdbc.SnowflakeDriver as the driver class in your JDBC application.
+So if there are no snowflake specific driver, even through JDBC, it is not possible to establish the connection in snowflake
+https://docs.snowflake.com/en/developer-guide/jdbc/jdbc-configure
+
+7. A third-party tool that supports standard JDBC or ODBC can connect to Snowflake even if it does not have a Snowflake-specific driver. Snowflake provides its own JDBC and ODBC drivers that can be used by any tool that supports these standard interfaces. Therefore, as long as the tool can use a JDBC or ODBC driver, it can connect to Snowflake using Snowflake's provided drivers.
+
+8. JDBC Driver is provided by snowflake
+
+9. False, Snowflake has generic ODBC/JDBC driver support
+
+10. Snowflake supports JDBC OR ODBC Does not care about driver it having its supported driver version to connect
+
+11. Answer is B : False
+
+12. The correct answer is B. False
+
+A third-party tool that supports standard JDBC or ODBC can connect to Snowflake even without a Snowflake-specific driver. This is because Snowflake supports standard JDBC and ODBC protocols, allowing tools that use these standard database connectivity interfaces to establish connections to Snowflake.
+
+The statement is false because:
+1. Standard JDBC/ODBC support is sufficient for basic connectivity
+2. Snowflake is designed to work with standard database connectivity protocols
+3. While Snowflake-specific drivers might offer optimized performance or additional features, they are not strictly required for basic connectivity
+
+13. False.
+
+A third-party tool that supports standard JDBC or ODBC can connect to Snowflake even without a Snowflake-specific driver.
+
+14. Answer is B
+
+15. It's B. As long as ODBC and JDBC are supported you can connect to Snowflake.
+
+16. as long as JDBC or ODBC is supported it can connect
+
+17. It is B
+

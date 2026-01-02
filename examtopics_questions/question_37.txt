@@ -1,0 +1,51 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 37 DISCUSSION
+
+Question:
+Which of the following statements are true of Snowflake data loading? (Choose three.)
+A. VARIANT ג€nullג€ values are not the same as SQL NULL values
+B. It is recommended to do frequent, single row DMLs
+C. It is recommended to validate the data before loading into the Snowflake target table
+D. It is recommended to use staging tables to manage MERGE statements
+Show Suggested Answer
+
+Choices:
+1. A. VARIANT ג€nullג€ values are not the same as SQL NULL values
+2. B. It is recommended to do frequent, single row DMLs
+3. C. It is recommended to validate the data before loading into the Snowflake target table
+4. D. It is recommended to use staging tables to manage MERGE statements
+
+Answers/Comments (12 found):
+1. B talks about refrequent single row DMLs, which goes against columnar principle
+
+2. A. VARIANT “null” values are not the same as SQL NULL values: In Snowflake, a VARIANT type can store semi-structured data like JSON. A JSON null is distinct from an SQL NULL. JSON null is treated as a valid value in Snowflake, while SQL NULL represents the absence of a value.
+
+B. It is recommended to do frequent, single row DMLs: This is false. Snowflake is optimized for bulk operations, and frequent single-row DMLs (e.g., INSERT, UPDATE, DELETE) are not recommended as they can lead to inefficiencies and higher costs.
+
+C. It is recommended to validate the data before loading into the Snowflake target table: This is true. Validating data before loading ensures data quality and avoids errors or inconsistencies in the target table.
+
+D. It is recommended to use staging tables to manage MERGE statements: This is true. Staging tables are often used to prepare and validate data before applying MERGE operations, which helps ensure data integrity and efficiency.
+
+Correct Choices: A, C, D
+
+3. ACD are correct
+
+4. ACD are correct
+
+5. ACD are correct
+
+6. Variant NULL values:
+https://docs.snowflake.com/en/user-guide/semistructured-considerations#label-variant-null
+
+7. ACD is correct answer.
+
+8. The result must be deterministic for merge so source can be any reference data source only constraint it should create/modify unique rows
+
+9. ACD are correct
+
+10. Frequent Single rows on any MPP like Snowflake has always been a no no!
+Function of an OLTP DB
+
+11. Frequent single row DML? Hell nah. ACD is the way to go.
+
+12. ACD, Correct
+

@@ -1,0 +1,1827 @@
+Question 788
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 788 DISCUSSION
+
+Question:
+Which applications can use key pair authentication? (Choose two).
+A. Snowflake Marketplace
+B. SnowCD
+C. Snowsight
+D. SnowSQL
+E. Snowflake connector for Python
+Show Suggested Answer
+
+Choices:
+1. A. Snowflake Marketplace
+2. B. SnowCD
+3. C. Snowsight
+4. D. SnowSQL
+5. E. Snowflake connector for Python
+
+Answers/Comments (1 found):
+1. DE correct - https://docs.snowflake.com/en/user-guide/key-pair-auth
+
+--------------------------------------------------------------------------------------------------------
+
+Question 789
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 789 DISCUSSION
+
+Question:
+Which commands can only be executed using SnowSQL? (Choose two.)
+A. COPY INTO
+B. GET
+C. LIST
+D. PUT
+E. REMOVE
+Show Suggested Answer
+
+Choices:
+1. A. COPY INTO
+2. B. GET
+3. C. LIST
+4. D. PUT
+5. E. REMOVE
+
+Answers/Comments (1 found):
+1. Answer is B and D
+
+--------------------------------------------------------------------------------------------------------
+
+Question 790
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 790 DISCUSSION
+
+Question:
+A user has enabled the STRIP_OUTER_ARRAY file format option for the COPY INTO {table} command to remove the outer array structure.
+
+What else will this format option and command do?
+A. Load the records into separate table rows.
+B. Unload the records from separate table rows.
+C. Export data files in smaller chunks.
+D. Ensure each unique element stores values of a single native data type.
+Show Suggested Answer
+
+Choices:
+1. A. Load the records into separate table rows.
+2. B. Unload the records from separate table rows.
+3. C. Export data files in smaller chunks.
+4. D. Ensure each unique element stores values of a single native data type.
+
+Answers/Comments (3 found):
+1. A. Load the records into separate table rows.
+
+When the STRIP_OUTER_ARRAY file format option is enabled for the COPY INTO {table} command, it removes the outer array structure and loads the records into separate table rows.
+
+2. correct
+
+3. A correct - https://interworks.com/blog/chastie/2020/01/28/zero-to-snowflake-loading-and-querying-semi-structured-json-data/
+
+--------------------------------------------------------------------------------------------------------
+
+Question 791
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 791 DISCUSSION
+
+Question:
+Which objects will incur storage costs associated with Fail-safe?
+A. External tables
+B. Permanent tables
+C. Data files available in internal stages
+D. Data files available in external stages
+Show Suggested Answer
+
+Choices:
+1. A. External tables
+2. B. Permanent tables
+3. C. Data files available in internal stages
+4. D. Data files available in external stages
+
+Answers/Comments (1 found):
+1. B correct - https://docs.snowflake.com/en/user-guide/cost-understanding-data-storage#:~:text=Files%20staged%20for%20bulk%20data%20loading%2Funloading%20%28stored%20compressed,deleted%20in%20the%20table%20that%20owns%20the%20clones.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 792
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 792 DISCUSSION
+
+Question:
+What technique does Snowflake use to limit the number of micro-partitions scanned by each query?
+A. B-tree
+B. Indexing
+C. Map reduce
+D. Pruning
+Show Suggested Answer
+
+Choices:
+1. A. B-tree
+2. B. Indexing
+3. C. Map reduce
+4. D. Pruning
+
+Answers/Comments (1 found):
+1. D correct - https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions
+
+--------------------------------------------------------------------------------------------------------
+
+Question 793
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 793 DISCUSSION
+
+Question:
+What activities can a user with the ORGADMIN role perform? (Choose two.)
+A. Create INFORMATION_SCHEMA in a database.
+B. View usage information for all accounts in the organization.
+C. Enable database cloning for an account in the organization.
+D. Enable database replication for an account in the organization.
+E. View micro-partition information for all accounts in the organization.
+Show Suggested Answer
+
+Choices:
+1. A. Create INFORMATION_SCHEMA in a database.
+2. B. View usage information for all accounts in the organization.
+3. C. Enable database cloning for an account in the organization.
+4. D. Enable database replication for an account in the organization.
+5. E. View micro-partition information for all accounts in the organization.
+
+Answers/Comments (3 found):
+1. View usage information for all accounts in the organization
+Enable database replication for an account in the organization.
+
+2. correct
+
+3. BD correct - https://docs.snowflake.com/en/user-guide/organizations
+
+--------------------------------------------------------------------------------------------------------
+
+Question 794
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 794 DISCUSSION
+
+Question:
+In a managed access schema, who can grant privileges on objects in the schema to other roles? (Choose two.)
+A. The schema owner role
+B. The ORGADMIN system role
+C. The USERADMIN system role
+D. The role with the MANAGE GRANTS privilege
+E. The role that owns the object in the schema
+Show Suggested Answer
+
+Choices:
+1. A. The schema owner role
+2. B. The ORGADMIN system role
+3. C. The USERADMIN system role
+4. D. The role with the MANAGE GRANTS privilege
+5. E. The role that owns the object in the schema
+
+Answers/Comments (3 found):
+1. https://docs.snowflake.com/en/user-guide/security-access-control-overview
+In addition, ownership can be transferred from one role to another. However, in a managed access schema, object owners lose the ability to make grant decisions. Only the schema owner (the role with the OWNERSHIP privilege on the schema) or a role with the MANAGE GRANTS privilege can grant privileges on objects in the schema.
+
+2. AD correct
+
+3. AD correct - https://docs.snowflake.com/en/user-guide/security-access-control-overview#:~:text=In%20a%20regular%20schema%2C%20the%20owner%20role%20has,owners%20lose%20the%20ability%20to%20make%20grant%20decisions.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 795
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 795 DISCUSSION
+
+Question:
+What are the recommended steps to address poor SQL query performance due to data spilling? (Choose two.)
+A. Clone the base table.
+B. Fetch required attributes only.
+C. Use a larger virtual warehouse.
+D. Process the data in smaller batches.
+E. Add another cluster in the virtual warehouse.
+Show Suggested Answer
+
+Choices:
+1. A. Clone the base table.
+2. B. Fetch required attributes only.
+3. C. Use a larger virtual warehouse.
+4. D. Process the data in smaller batches.
+5. E. Add another cluster in the virtual warehouse.
+
+Answers/Comments (9 found):
+1. performance problem scale up
+
+2. Answer is C and D
+https://docs.snowflake.com/en/user-guide/ui-query-profile
+For some operations (e.g. duplicate elimination for a huge data set), the amount of memory available for the compute resources used to execute the operation might not be sufficient to hold intermediate results. As a result, the query processing engine will start spilling the data to local disk. If the local disk space is not sufficient, the spilled data is then saved to remote disks.
+
+This spilling can have a profound effect on query performance (especially if remote disk is used for spilling). To alleviate this, we recommend:
+
+Using a larger warehouse (effectively increasing the available memory/local disk space for the operation), and/or
+
+Processing data in smaller batches.
+
+3. It's B and C
+
+4. How can you choose and answer that use the word "Only" instead of the fact that the question ask two answer?
+
+so i'm not ok with the B
+
+5. The spilling can't always be avoided, especially for large batches of data, but it can be decreased by:
+
+Reviewing the query for query optimization especially if it is a new query.
+Reducing the amount of data processed. For example, by trying to improve partition pruning, or projecting only the columns that are needed in the output.
+Decreasing the number of parallel queries running in the warehouse.
+Trying to split the processing into several steps (for example by replacing the CTEs with temporary tables).
+Using a larger warehouse. This effectively means more memory and more local disk space.
+https://community.snowflake.com/s/article/Performance-impact-from-local-and-remote-disk-spilling
+
+6. Actually I think there are 3 possible options. 
+However, only B and C are explicitly mentioned in docs (as shown by basdas comment)
+Moreover, I think processing data in smaller batches can be just unhandy and requiring more work than other solutions.
+Thus I eventually vote for BC
+
+7. The spilling can't always be avoided, especially for large batches of data, but it can be decreased by:
+
+Reviewing the query for query optimization especially if it is a new query
+Reducing the amount of data processed. For example, by trying to improve partition pruning, or projecting only the columns that are needed in the output.
+Decreasing the number of parallel queries running in the warehouse.
+Trying to split the processing into several steps (for example by replacing the CTEs with temporary tables).
+Using a larger warehouse - this effectively means more memory and more local disk space.
+
+8. CD correct
+
+https://community.snowflake.com/s/article/Performance-impact-from-local-and-remote-disk-spilling
+
+9. its BD. Snowflake does not encourage increasing the warehouse size if something can be done with the existing query. The link which you gave also talk about "projecting only the columns that are needed in the output"
+
+--------------------------------------------------------------------------------------------------------
+
+Question 796
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 796 DISCUSSION
+
+Question:
+A Snowflake user wants to share unstructured data through the use of secure views.
+
+Which URL types can be used? (Choose two.)
+A. Scoped URL
+B. HTTPS URL
+C. Cloud storage URL
+D. File URL
+E. Pre-signed URL
+Show Suggested Answer
+
+Choices:
+1. A. Scoped URL
+2. B. HTTPS URL
+3. C. Cloud storage URL
+4. D. File URL
+5. E. Pre-signed URL
+
+Answers/Comments (1 found):
+1. AE correct 
+
+https://docs.snowflake.com/en/user-guide/unstructured-data-sharing
+
+--------------------------------------------------------------------------------------------------------
+
+Question 797
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 797 DISCUSSION
+
+Question:
+What are characteristics of reader accounts in Snowflake? (Choose two.)
+A. Reader account users cannot add new data to the account.
+B. Reader account users can share data to other reader accounts.
+C. A single reader account can consume data from multiple provider accounts.
+D. Data consumers are responsible for reader account setup and data usage costs.
+E. Reader accounts enable data consumers to access and query data shared by the provider.
+Show Suggested Answer
+
+Choices:
+1. A. Reader account users cannot add new data to the account.
+2. B. Reader account users can share data to other reader accounts.
+3. C. A single reader account can consume data from multiple provider accounts.
+4. D. Data consumers are responsible for reader account setup and data usage costs.
+5. E. Reader accounts enable data consumers to access and query data shared by the provider.
+
+Answers/Comments (7 found):
+1. correct
+
+2. CE. reader account can add new data if has own account or using separate account
+
+3. change to AE
+
+4. DE. reader account can add new data if has own account or using separate account
+
+5. CE i mean
+
+6. correct
+
+7. AE correct - https://docs.snowflake.com/en/user-guide/data-sharing-reader-create
+
+--------------------------------------------------------------------------------------------------------
+
+Question 798
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 798 DISCUSSION
+
+Question:
+Why should a Snowflake user configure a secure view? (Choose two.)
+A. To encrypt the data in transit
+B. To execute faster than a standard view
+C. To protect hidden data from other users
+D. To improve the performance of a query
+E. To hide the view definition from other users
+Show Suggested Answer
+
+Choices:
+1. A. To encrypt the data in transit
+2. B. To execute faster than a standard view
+3. C. To protect hidden data from other users
+4. D. To improve the performance of a query
+5. E. To hide the view definition from other users
+
+Answers/Comments (2 found):
+1. CE
+Some of the internal optimizations for views require access to the underlying data in the base tables for the view. This access might allow data that is hidden from users of the view to be exposed through user code, such as user-defined functions, or other programmatic methods. Secure views do not utilize these optimizations, ensuring that users have no access to the underlying data.
+
+For security or privacy reasons, you might not wish to expose the underlying tables or internal structural details for a view. With secure views, the view definition and details are visible only to authorized users (i.e. users who are granted the role that owns the view).
+
+2. CE correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 799
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 799 DISCUSSION
+
+Question:
+Which activities are managed by Snowflake’s Cloud Services layer? (Choose two.)
+A. Authentication
+B. Access delegation
+C. Data pruning
+D. Data compression
+E. Query parsing and optimization
+Show Suggested Answer
+
+Choices:
+1. A. Authentication
+2. B. Access delegation
+3. C. Data pruning
+4. D. Data compression
+5. E. Query parsing and optimization
+
+Answers/Comments (1 found):
+1. AE correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 800
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 800 DISCUSSION
+
+Question:
+The COPY INTO [location] command can unload data from a table directly into which locations? (Choose two.)
+A. A named internal stage
+B. A Snowpipe REST endpoint
+C. A network share on a client machine
+D. A local directory or folder on a client machine
+E. A named external stage that references an external cloud location
+Show Suggested Answer
+
+Choices:
+1. A. A named internal stage
+2. B. A Snowpipe REST endpoint
+3. C. A network share on a client machine
+4. D. A local directory or folder on a client machine
+5. E. A named external stage that references an external cloud location
+
+Answers/Comments (3 found):
+1. AE is correct
+
+Copy into is possible for 
+1) Named internal stage (or table/user stage). 
+2) Named external stage that references an external location (Amazon S3, Google Cloud Storage, or Microsoft Azure).
+3) External location
+https://docs.snowflake.com/en/sql-reference/sql/copy-into-location
+
+2. AE correct
+
+3. AE correct - https://docs.snowflake.com/en/sql-reference/sql/copy-into-location
+
+--------------------------------------------------------------------------------------------------------
+
+Question 801
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 801 DISCUSSION
+
+Question:
+What does the Activity area of Snowsight allow users to do? (Choose two.)
+A. Schedule automated data backups.
+B. Explore each step of an executed query.
+C. Monitor queries executed by users in an account.
+D. Create and manage user roles and permissions.
+E. Access Snowflake Marketplace to find and integrate datasets.
+Show Suggested Answer
+
+Choices:
+1. A. Schedule automated data backups.
+2. B. Explore each step of an executed query.
+3. C. Monitor queries executed by users in an account.
+4. D. Create and manage user roles and permissions.
+5. E. Access Snowflake Marketplace to find and integrate datasets.
+
+Answers/Comments (4 found):
+1. BC correct. No longer called Activity, called Monitoring now
+
+2. BC is correct. 
+The keyword is activity area!
+
+The Activity area of Snowsight, the Snowflake web interface, lets you:
+
+1)Monitor queries executed by users in your account.
+2)View details about queries.
+3)View performance data.
+4)Explore each step of an executed query.
+5)Monitor the status of data loading using COPY INTO (bulk loading) and pipes (continuous loading).
+6)View details about instances of bulk and continuous data loading.
+7)Navigate to the copy history for individual tables.
+https://docs.snowflake.com/en/user-guide/ui-snowsight-activity
+
+3. bc agree
+
+4. BC correct 
+
+https://docs.snowflake.com/en/user-guide/ui-snowsight-activity
+https://docs.snowflake.com/en/user-guide/ui-snowsight-quick-tour
+
+--------------------------------------------------------------------------------------------------------
+
+Question 802
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 802 DISCUSSION
+
+Question:
+In which Snowsight section can a user switch roles, modify their profile, and access documentation?
+A. The user menu
+B. The activity page
+C. The content pane
+D. The worksheets page
+Show Suggested Answer
+
+Choices:
+1. A. The user menu
+2. B. The activity page
+3. C. The content pane
+4. D. The worksheets page
+
+Answers/Comments (4 found):
+1. None of them. Account Menu as of 2024-02-14
+https://docs.snowflake.com/en/user-guide/ui-snowsight-quick-tour#get-account-information-and-update-your-user-profile-from-the-account-menu
+
+2. The answer is A. The user Menu
+https://docs.snowflake.com/en/user-guide/ui-snowsight-quick-tour#user-menu
+
+3. A correct
+
+4. A correct - https://docs.snowflake.com/en/user-guide/ui-snowsight-quick-tour
+
+--------------------------------------------------------------------------------------------------------
+
+Question 803
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 803 DISCUSSION
+
+Question:
+What is the recommended way to change the existing file format type in my_format from CSV to JSON?
+A. ALTER FILE FORMAT my_format SET TYPE=JSON;
+B. ALTER FILE FORMAT my_format SWAP TYPE WITH JSON;
+C. CREATE OR REPLACE FILE FORMAT my_format TYPE=JSON;
+D. REPLACE FILE FORMAT my_format TYPE=JSON;
+Show Suggested Answer
+
+Choices:
+1. A. ALTER FILE FORMAT my_format SET TYPE=JSON;
+2. B. ALTER FILE FORMAT my_format SWAP TYPE WITH JSON;
+3. C. CREATE OR REPLACE FILE FORMAT my_format TYPE=JSON;
+4. D. REPLACE FILE FORMAT my_format TYPE=JSON;
+
+Answers/Comments (4 found):
+1. C
+A doesn't work, I tested:
+--- 803 
+CREATE FILE FORMAT ET_803 TYPE=CSV;
+
+DESCRIBE FILE FORMAT ET_803;
+
+ALTER FILE FORMAT ET_803 SET TYPE =JSON;
+---File format type cannot be changed.
+
+CREATE OR REPLACE FILE FORMAT ET_803 TYPE=JSON;
+
+DESCRIBE FILE FORMAT ET_803;
+
+DROP FILE FORMAT ET_803;
+
+2. ALTER FILE FORMAT does not support the following actions:
+- Changing the type (CSV, JSON, etc.) for the file format.
+
+To make any of these changes, you must recreate the file format.
+
+3. C correct - https://docs.snowflake.com/en/sql-reference/sql/create-file-format
+
+4. Answer C is correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 804
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 804 DISCUSSION
+
+Question:
+Which features are included in Snowsight? (Choose two.)
+A. Worksheet sharing
+B. Referencing SnowSQL
+C. Exploring the Snowflake Marketplace
+D. Changing the Snowflake account cloud provider
+E. Downloading query result data larger than 100 MB
+Show Suggested Answer
+
+Choices:
+1. A. Worksheet sharing
+2. B. Referencing SnowSQL
+3. C. Exploring the Snowflake Marketplace
+4. D. Changing the Snowflake account cloud provider
+5. E. Downloading query result data larger than 100 MB
+
+Answers/Comments (6 found):
+1. AC are for sure possible.
+E is also possible
+https://docs.snowflake.com/en/user-guide/ui-snowsight-query
+To download your query results as a CSV-formatted or TSV-formatted file, select Download results.
+
+The size of your file depends on the amount of data returned by your query. Snowflake does not limit the size of files exported for query results.
+
+2. I just tested and E is definitely possible too. 
+SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER;
+Then click the download button. 
+That table has 15mln rows and is more than 1GB.
+
+3. 2.47 GB table successfully downloaded.
+
+4. AC is correct!
+
+5. correct
+
+6. AC correct - https://docs.snowflake.com/en/user-guide/ui-snowsight-quick-tour
+
+--------------------------------------------------------------------------------------------------------
+
+Question 805
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 805 DISCUSSION
+
+Question:
+How long can a data consumer who has a pre-signed URL access data files using Snowflake?
+A. Indefinitely
+B. Until the result_cache expires
+C. Until the retention_time is met
+D. Until the expiration_time is exceeded
+Show Suggested Answer
+
+Choices:
+1. A. Indefinitely
+2. B. Until the result_cache expires
+3. C. Until the retention_time is met
+4. D. Until the expiration_time is exceeded
+
+Answers/Comments (3 found):
+1. Indefinitely - for file URL
+Result cache - scoped URL
+
+Pre-signed - ans D
+
+2. pre-signed URLs have expiration time
+
+3. D correct - https://docs.snowflake.com/en/sql-reference/functions/get_presigned_url
+
+--------------------------------------------------------------------------------------------------------
+
+Question 806
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 806 DISCUSSION
+
+Question:
+What mechanisms can be used to inform Snowpipe that there are staged files available to load into a Snowflake table? (Choose two.)
+A. Cloud messaging
+B. Email integrations
+C. Error notifications
+D. REST endpoints
+E. Snowsight interactions
+Show Suggested Answer
+
+Choices:
+1. A. Cloud messaging
+2. B. Email integrations
+3. C. Error notifications
+4. D. REST endpoints
+5. E. Snowsight interactions
+
+Answers/Comments (4 found):
+1. answer is AD
+
+as per DOc
+1) Automating Snowpipe using cloud messaging
+2) Calling Snowpipe REST endpoints
+
+2. AD is correct!
+
+3. correct
+
+4. AD correct - https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro#:~:text=Different%20mechanisms%20for%20detecting%20the%20staged%20files%20are,Snowpipe%20using%20cloud%20messaging%20Calling%20Snowpipe%20REST%20endpoints
+
+--------------------------------------------------------------------------------------------------------
+
+Question 807
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 807 DISCUSSION
+
+Question:
+A Snowflake user needs to import a JSON file larger than 16 MB.
+
+What file format option could be used?
+A. trim_space = true
+B. compression = auto
+C. strip_outer_array = true
+D. strip_outer_array = false
+Show Suggested Answer
+
+Choices:
+1. A. trim_space = true
+2. B. compression = auto
+3. C. strip_outer_array = true
+4. D. strip_outer_array = false
+
+Answers/Comments (3 found):
+1. C is correct
+
+2. The correct answer is C.
+ strip_outer_array = true will remove the outer array structure and copy the file into multiple table rows instead of row. (the limitation for table rows is max 16MB)
+with this solution it will be fine.
+
+https://docs.snowflake.com/en/user-guide/data-load-considerations-prepare#semi-structured-data-size-limitations
+
+3. C correct - https://docs.snowflake.com/en/user-guide/data-load-considerations-prepare
+
+--------------------------------------------------------------------------------------------------------
+
+Question 808
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 808 DISCUSSION
+
+Question:
+What is a feature of column-level security in Snowflake?
+A. Role access policies
+B. Network policies
+C. Internal tokenization
+D. External tokenization
+Show Suggested Answer
+
+Choices:
+1. A. Role access policies
+2. B. Network policies
+3. C. Internal tokenization
+4. D. External tokenization
+
+Answers/Comments (5 found):
+1. C. Internal tokenization
+
+This feature helps protect sensitive data by replacing it with a token that can only be mapped back to the original data by authorized users or systems.
+
+2. Sorry i meant D
+
+3. Correct answer D. External Tokenization
+
+4. The correct answer is D.
+Currently, Column-level Security includes two features:
+
+1)Dynamic Data Masking
+2)External Tokenization
+
+https://docs.snowflake.com/user-guide/security-column-intro#what-is-column-level-security
+
+5. D correct - https://docs.snowflake.com/user-guide/security-column-intro
+
+--------------------------------------------------------------------------------------------------------
+
+Question 809
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 809 DISCUSSION
+
+Question:
+Which common query problems can the Query Profile help a user identify and troubleshoot? (Choose two.)
+A. When window functions are used incorrectly
+B. When there are exploding joins
+C. When there is a UNION without ALL
+D. When the SELECT DISTINCT command returns too many values
+E. When there are Common Table Expressions (CTEs) without a final SELECT statement
+Show Suggested Answer
+
+Choices:
+1. A. When window functions are used incorrectly
+2. B. When there are exploding joins
+3. C. When there is a UNION without ALL
+4. D. When the SELECT DISTINCT command returns too many values
+5. E. When there are Common Table Expressions (CTEs) without a final SELECT statement
+
+Answers/Comments (2 found):
+1. B - Exploding JOIN well they are almost always bad produces a ton of result records
+C - UNION without ALL needs extra compute to dedupe the combined results
+
+2. BC correct - https://www.snowflake.com/blog/new-approaches-visualizing-snowflake-query-statistics/#:~:text=For%20years%2C%20our%20documentation%20has%20helped%20customers%20identify,pruning%20%28most%20often%20evidenced%20by%20large%20table%20scans%29
+
+--------------------------------------------------------------------------------------------------------
+
+Question 810
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 810 DISCUSSION
+
+Question:
+What is the Fail-safe retention period for transient and temporary tables?
+A. 0 days
+B. 1 day
+C. 7 days
+D. 90 days
+Show Suggested Answer
+
+Choices:
+1. A. 0 days
+2. B. 1 day
+3. C. 7 days
+4. D. 90 days
+
+Answers/Comments (1 found):
+1. A correct - https://docs.snowflake.com/en/user-guide/tables-temp-transient
+
+--------------------------------------------------------------------------------------------------------
+
+Question 811
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 811 DISCUSSION
+
+Question:
+Which Snowflake features can be enabled by calling the SYSTEM$GLOBAL_ACCOUNT_SET_PARAMETER function by a user with the ORGADMIN role? (Choose two.)
+A. Clustering
+B. Client redirect
+C. Fail-safe
+D. Search optimization service
+E. Account and database replication
+Show Suggested Answer
+
+Choices:
+1. A. Clustering
+2. B. Client redirect
+3. C. Fail-safe
+4. D. Search optimization service
+5. E. Account and database replication
+
+Answers/Comments (3 found):
+1. BE is correct answer!
+
+https://docs.snowflake.com/en/sql-reference/functions/system_global_account_set_parameter#:~:text=for%20the%20account%3A-,Replication,-Client%20Redirect
+
+2. correct
+
+3. BE correct - https://docs.snowflake.com/en/sql-reference/functions/system_global_account_set_parameter
+
+--------------------------------------------------------------------------------------------------------
+
+Question 812
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 812 DISCUSSION
+
+Question:
+What are characteristics of directory tables when used with unstructured data? (Choose two.)
+A. Only cloud storage stages support directory tables.
+B. Each directory table has grantable privileges of its own.
+C. Directory tables store a catalog of staged files in cloud storage.
+D. A directory table can be added explicitly to a stage when the stage is created.
+E. A directory table is a separate database object that can be layered explicitly on a stage.
+Show Suggested Answer
+
+Choices:
+1. A. Only cloud storage stages support directory tables.
+2. B. Each directory table has grantable privileges of its own.
+3. C. Directory tables store a catalog of staged files in cloud storage.
+4. D. A directory table can be added explicitly to a stage when the stage is created.
+5. E. A directory table is a separate database object that can be layered explicitly on a stage.
+
+Answers/Comments (3 found):
+1. CD is correct!
+
+Directory table:
+1- its implicit not separate database object
+2 - like external table stores file-level metadata about the data files in the stage
+3 - has NO grantable privileges of its own
+
+https://docs.snowflake.com/en/user-guide/data-load-dirtables#what-is-a-directory-table
+
+2. correct
+
+3. CD correct - https://docs.snowflake.com/en/user-guide/data-load-dirtables
+
+--------------------------------------------------------------------------------------------------------
+
+Question 813
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 813 DISCUSSION
+
+Question:
+Snowflake best practice recommends that which role be used to enforce a network policy on a Snowflake account?
+A. ACCOUNTADMIN
+B. SECURITYADMIN
+C. SYSADMIN
+D. USERADMIN
+Show Suggested Answer
+
+Choices:
+1. A. ACCOUNTADMIN
+2. B. SECURITYADMIN
+3. C. SYSADMIN
+4. D. USERADMIN
+
+Answers/Comments (1 found):
+1. B correct - https://docs.snowflake.com/en/sql-reference/sql/create-network-policy
+
+--------------------------------------------------------------------------------------------------------
+
+Question 814
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 814 DISCUSSION
+
+Question:
+What is the default behavior of internal stages in Snowflake?
+A. Named internal stages are created by default.
+B. Users must manually create their own internal stages.
+C. Data files are automatically staged to a default location.
+D. Each user and table are automatically allocated an internal stage.
+Show Suggested Answer
+
+Choices:
+1. A. Named internal stages are created by default.
+2. B. Users must manually create their own internal stages.
+3. C. Data files are automatically staged to a default location.
+4. D. Each user and table are automatically allocated an internal stage.
+
+Answers/Comments (2 found):
+1. Correct answer is D.
+https://docs.snowflake.com/en/user-guide/data-load-local-file-system-create-stage#types-of-internal-stages
+
+2. D correct - https://docs.snowflake.com/en/user-guide/data-load-local-file-system-create-stage
+
+--------------------------------------------------------------------------------------------------------
+
+Question 815
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 815 DISCUSSION
+
+Question:
+The MAXIMUM size for a serverless task run is equivalent to what size virtual warehouse?
+A. Medium
+B. Large
+C. 2X-Large
+D. 4X-Large
+Show Suggested Answer
+
+Choices:
+1. A. Medium
+2. B. Large
+3. C. 2X-Large
+4. D. 4X-Large
+
+Answers/Comments (2 found):
+1. The maximum compute size for a serverless task is equivalent to an XXLARGE user-managed virtual warehouse.
+
+2. C correct - https://docs.snowflake.com/en/user-guide/tasks-intro#:~:text=The%20maximum%20size%20for%20a%20serverless%20task,run%20is%20equivalent%20to%20an%20XXLARGE%20warehouse.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 816
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 816 DISCUSSION
+
+Question:
+What storage cost is completely eliminated when a Snowflake table is defined as transient?
+A. Active
+B. Fail-safe
+C. Staged
+D. Time Travel
+Show Suggested Answer
+
+Choices:
+1. A. Active
+2. B. Fail-safe
+3. C. Staged
+4. D. Time Travel
+
+Answers/Comments (1 found):
+1. B correct - https://docs.snowflake.com/en/user-guide/tables-temp-transient
+
+--------------------------------------------------------------------------------------------------------
+
+Question 817
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 817 DISCUSSION
+
+Question:
+How can a Snowflake user traverse semi-structured data?
+A. Insert a colon (:) between the VARIANT column name and any first-level element.
+B. Insert a colon (:) between the VARIANT column name and any second-level element.
+C. Insert a double colon (::) between the VARIANT column name and any first-level element.
+D. Insert a double colon (::) between the VARIANT column name and any second-level element.
+Show Suggested Answer
+
+Choices:
+1. A. Insert a colon (:) between the VARIANT column name and any first-level element.
+2. B. Insert a colon (:) between the VARIANT column name and any second-level element.
+3. C. Insert a double colon (::) between the VARIANT column name and any first-level element.
+4. D. Insert a double colon (::) between the VARIANT column name and any second-level element.
+
+Answers/Comments (2 found):
+1. A : select column:first_level_column from json_table
+
+2. A correct - https://community.snowflake.com/s/article/querying-semi-structured-data#:~:text=Snowflake%20supports%20SQL%20queries%20that%20access%20semi-structured%20data,as%20the%20path%20delimiter%2C%20i.e.%20the%20form%20table.column%3Apathelement1.pathelement2.pathelement3.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 818
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 818 DISCUSSION
+
+Question:
+Based on Snowflake recommendations, when creating a hierarchy of custom roles, the top-most custom role should be assigned to which role?
+A. ACCOUNTADMIN
+B. SECURITYADMIN
+C. SYSADMIN
+D. USERADMIN
+Show Suggested Answer
+
+Choices:
+1. A. ACCOUNTADMIN
+2. B. SECURITYADMIN
+3. C. SYSADMIN
+4. D. USERADMIN
+
+Answers/Comments (6 found):
+1. https://docs.snowflake.com/en/user-guide/security-access-control-overview#custom-roles
+
+When creating roles that will serve as the owners of securable objects in the system, Snowflake recommends creating a hierarchy of custom roles, with the top-most custom role assigned to the system role SYSADMIN.
+
+2. C is correct
+
+3. The Correct Answer is C. 
+SYSADMIN
+https://docs.snowflake.com/en/user-guide/security-access-control-overview#custom-roles
+
+4. correct
+
+5. C correct
+
+6. correct answer is C
+https://community.snowflake.com/s/article/Quickly-Visualize-Snowflake-s-Roles-Grants-and-Privileges
+
+--------------------------------------------------------------------------------------------------------
+
+Question 819
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 819 DISCUSSION
+
+Question:
+What happens to the privileges granted to Snowflake system-defined roles?
+A. The privileges cannot be revoked.
+B. The privileges can be revoked by an ACCOUNTADMIN.
+C. The privileges can be revoked by an ORGADMIN.
+D. The privileges can be revoked by any user-defined role with appropriate privileges.
+Show Suggested Answer
+
+Choices:
+1. A. The privileges cannot be revoked.
+2. B. The privileges can be revoked by an ACCOUNTADMIN.
+3. C. The privileges can be revoked by an ORGADMIN.
+4. D. The privileges can be revoked by any user-defined role with appropriate privileges.
+
+Answers/Comments (2 found):
+1. There are a small number of system-defined roles in a Snowflake account. System-defined roles cannot be dropped. In addition, the privileges granted to these roles by Snowflake cannot be revoked.
+
+2. A correct - https://docs.snowflake.com/en/user-guide/security-access-control-overview
+
+--------------------------------------------------------------------------------------------------------
+
+Question 820
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 820 DISCUSSION
+
+Question:
+By default, which role allows a user to manage a Snowflake Data Exchange share?
+A. ACCOUNTADMIN
+B. SECURITYADMIN
+C. SYSADMIN
+D. USERADMIN
+Show Suggested Answer
+
+Choices:
+1. A. ACCOUNTADMIN
+2. B. SECURITYADMIN
+3. C. SYSADMIN
+4. D. USERADMIN
+
+Answers/Comments (1 found):
+1. A correct - https://docs.snowflake.com/en/user-guide/security-access-privileges-shares
+
+--------------------------------------------------------------------------------------------------------
+
+Question 821
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 821 DISCUSSION
+
+Question:
+How does the PARTITION BY option affect an expression for a COPY INTO [location] command?
+A. The unload operation partitions table rows into separate files unloaded to the specified table.
+B. The unload operation partitions table rows into separate files unloaded to the specified stage.
+C. A single file will be loaded with a user-defined partition key and the user can use this partition key for clustering.
+D. A single file will be loaded with a Snowflake-defined partition key and Snowflake will use this key for pruning.
+Show Suggested Answer
+
+Choices:
+1. A. The unload operation partitions table rows into separate files unloaded to the specified table.
+2. B. The unload operation partitions table rows into separate files unloaded to the specified stage.
+3. C. A single file will be loaded with a user-defined partition key and the user can use this partition key for clustering.
+4. D. A single file will be loaded with a Snowflake-defined partition key and Snowflake will use this key for pruning.
+
+Answers/Comments (3 found):
+1. B. 
+The PARTITION BY option in a COPY INTO command specifies an expression that partitions the unloaded table rows into separate files unloaded to the specified stage. The expression must be based on one or more columns in the table.
+
+2. B correct
+
+3. B correct - https://docs.snowflake.com/en/user-guide/data-unload-overview
+
+--------------------------------------------------------------------------------------------------------
+
+Question 822
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 822 DISCUSSION
+
+Question:
+How does Snowflake improve the performance of queries that are designed to filter out a significant amount of data?
+A. The use of indexing
+B. The use of pruning
+C. The use of TableScan
+D. By increasing the number of partitions scanned
+Show Suggested Answer
+
+Choices:
+1. A. The use of indexing
+2. B. The use of pruning
+3. C. The use of TableScan
+4. D. By increasing the number of partitions scanned
+
+Answers/Comments (3 found):
+1. Skipping Micro-Partition scan by clustering the keys
+
+2. B : Purring improves query efficiency
+
+3. B correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 823
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 823 DISCUSSION
+
+Question:
+A JSON document is stored in the source_column of type VARIANT. The document has an array called elements. The array contains the name key that has a string value.
+
+How can a Snowflake user extract the name from the first element?
+A. source_column.elements[1]:name
+B. source_column.elements[0]:name
+C. source_column:elements[1].name
+D. source_column:elements[0].name
+Show Suggested Answer
+
+Choices:
+1. A. source_column.elements[1]:name
+2. B. source_column.elements[0]:name
+3. C. source_column:elements[1].name
+4. D. source_column:elements[0].name
+
+Answers/Comments (5 found):
+1. D correct
+
+2. https://docs.snowflake.com/en/user-guide/querying-semistructured
+Retrieving a Single Instance of a Repeating Element¶
+Retrieve a specific numbered instance of a child element in a repeating array by adding a numbered predicate (starting from 0) to the array reference.
+
+3. I think the answer should be C:
+Based on the output of the FLATTEN function, 
++-----+------+------+-------+-------+------+
+| SEQ | KEY | PATH | INDEX | VALUE | THIS |
+|-----+------+------+-------+-------+------|
+Key is the second output, therefore source_column:elements[1].name should point to the key. Not sure though :\
+
+4. D is correct
+
+5. This is not related to the FLATTEN function. This is merely a question on traversing semi-structured datatypes:
+https://docs.snowflake.com/en/user-guide/querying-semistructured
+Insert a colon : between the VARIANT column name and any first-level element: <column>:<level1_element>.
+There are two ways to access elements in a JSON object:
+Dot Notation
+Bracket Notation
+Retrieve a specific numbered instance of a child element in a repeating array by adding a numbered predicate (starting from 0) to the array reference.
+so the answer is D
+
+--------------------------------------------------------------------------------------------------------
+
+Question 824
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 824 DISCUSSION
+
+Question:
+Which function should be used to insert JSON formatted string data into a VARIANT field?
+A. FLATTEN
+B. CHECK_JSON
+C. PARSE_JSON
+D. TO_VARIANT
+Show Suggested Answer
+
+Choices:
+1. A. FLATTEN
+2. B. CHECK_JSON
+3. C. PARSE_JSON
+4. D. TO_VARIANT
+
+Answers/Comments (3 found):
+1. The correct answer is C. PARSE_JSON
+https://docs.snowflake.com/en/sql-reference/functions/parse_json
+
+2. C correct - https://docs.snowflake.com/en/sql-reference/functions/to_json
+
+3. correct link - https://docs.snowflake.com/en/sql-reference/functions/parse_json
+
+--------------------------------------------------------------------------------------------------------
+
+Question 825
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 825 DISCUSSION
+
+Question:
+Which permission on a Snowflake virtual warehouse allows the role to resize the warehouse?
+A. ALTER
+B. MODIFY
+C. MONITOR
+D. USAGE
+Show Suggested Answer
+
+Choices:
+1. A. ALTER
+2. B. MODIFY
+3. C. MONITOR
+4. D. USAGE
+
+Answers/Comments (2 found):
+1. B is the correct answer!
+
+https://docs.snowflake.com/en/sql-reference/sql/alter-warehouse#access-control-requirements
+
+2. B correct - https://stackoverflow.com/questions/67444656/how-do-you-restrict-a-warehouse-to-resize-to-role-in-snowflake
+
+--------------------------------------------------------------------------------------------------------
+
+Question 826
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 826 DISCUSSION
+
+Question:
+What is it called when a customer managed key is combined with a Snowflake managed key to create a composite key for encryption?
+A. Hierarchical key model
+B. Client-side encryption
+C. Tri-secret secure encryption
+D. Key pair authentication
+Show Suggested Answer
+
+Choices:
+1. A. Hierarchical key model
+2. B. Client-side encryption
+3. C. Tri-secret secure encryption
+4. D. Key pair authentication
+
+Answers/Comments (4 found):
+1. The correct answer is C.
+https://docs.snowflake.com/en/user-guide/security-encryption-manage
+
+2. https://docs.snowflake.com/en/user-guide/security-encryption-manage#tri-secret-secure
+
+3. C : https://docs.snowflake.com/en/user-guide/security-encryption-manage
+
+4. C correct - https://www.phdata.io/blog/encrypting-snowflake-data-with-own-keys/
+
+--------------------------------------------------------------------------------------------------------
+
+Question 827
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 827 DISCUSSION
+
+Question:
+What is the COPY INTO [location] command option default for unloading data into multiple files?
+A. SINGLE = 0
+B. SINGLE = NULL
+C. SINGLE = TRUE
+D. SINGLE = FALSE
+Show Suggested Answer
+
+Choices:
+1. A. SINGLE = 0
+2. B. SINGLE = NULL
+3. C. SINGLE = TRUE
+4. D. SINGLE = FALSE
+
+Answers/Comments (1 found):
+1. D correct - https://docs.snowflake.com/en/user-guide/data-unload-overview#:~:text=The%20COPY%20INTO%20%3Clocation%3E%20command%20provides%20a%20copy,SINGLE%20%3D%20FALSE%20%28i.e.%20unload%20into%20multiple%20files%29.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 828
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 828 DISCUSSION
+
+Question:
+A size 3X-Large multi-cluster warehouse runs one cluster for one full hour and then runs two clusters for the next full hour.
+
+What would be the total number of credits billed?
+A. 64
+B. 128
+C. 149
+D. 192
+Show Suggested Answer
+
+Choices:
+1. A. 64
+2. B. 128
+3. C. 149
+4. D. 192
+
+Answers/Comments (5 found):
+1. I hope I don't have to calculate this in my head on the exam :) 
+D
+XS - S - M - L - XL - 2XL - 3XL
+1 - 2 -4 - 8 - 16 - 32 -64
+1st hr - 1
+2nd hr - 2
+64*3 = 192
+
+2. 192 is the only number here divisible by 3
+
+3. D. a 3X-Large multi-cluster warehouse runs 1 cluster for one full hour and then runs 2 clusters for the next full hour, the total number of credits billed would be 192 (i.e. 64 + 128).
+
+4. 64+64+64 Correct D
+
+5. Correct D - 64 + 128 
+
+https://docs.snowflake.com/en/user-guide/warehouses-overview
+
+--------------------------------------------------------------------------------------------------------
+
+Question 829
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 829 DISCUSSION
+
+Question:
+What is the impact of increasing the number of concurrent users on a Snowflake virtual warehouse?
+A. Improved performance for small, simple queries
+B. Improved performance for large, complex queries
+C. Decreased performance for large, complex queries
+D. Decreased consumption of Snowflake credits
+Show Suggested Answer
+
+Choices:
+1. A. Improved performance for small, simple queries
+2. B. Improved performance for large, complex queries
+3. C. Decreased performance for large, complex queries
+4. D. Decreased consumption of Snowflake credits
+
+Answers/Comments (2 found):
+1. C correct.
+Multi-cluster warehouses are best utilized for scaling resources to improve concurrency for users/queries.
+https://docs.snowflake.com/en/user-guide/warehouses-multicluster#benefits-of-multi-cluster-warehouses
+
+2. C correct - https://docs.snowflake.com/en/user-guide/warehouses-multicluster#:~:text=As%20the%20number%20of%20concurrent%20user%20sessions%20and%2For,to%20the%20maximum%20number%20defined%20for%20the%20warehouse.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 830
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 830 DISCUSSION
+
+Question:
+By default, how long is the standard retention period for Time Travel across all Snowflake accounts?
+A. 0 days
+B. 1 day
+C. 7 days
+D. 14 days
+Show Suggested Answer
+
+Choices:
+1. A. 0 days
+2. B. 1 day
+3. C. 7 days
+4. D. 14 days
+
+Answers/Comments (2 found):
+1. B is correct. The standard retention period is 1 day (24 hours) and is automatically enabled for all Snowflake accounts: For Snowflake Standard Edition, the retention period can be set to 0 (or unset back to the default of 1 day) at the account and object level (i.e. databases, schemas, and tables).
+
+2. B correct - https://docs.snowflake.com/en/user-guide/data-time-travel
+
+--------------------------------------------------------------------------------------------------------
+
+Question 831
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 831 DISCUSSION
+
+Question:
+What type of query will benefit from the query acceleration service?
+A. Queries without filters or aggregation
+B. Queries with large scans and selective filters
+C. Queries where the GROUP BY has high cardinality
+D. Queries of tables that have search optimization service enabled
+Show Suggested Answer
+
+Choices:
+1. A. Queries without filters or aggregation
+2. B. Queries with large scans and selective filters
+3. C. Queries where the GROUP BY has high cardinality
+4. D. Queries of tables that have search optimization service enabled
+
+Answers/Comments (3 found):
+1. B is correct.
+Examples of the types of workloads that might benefit from the query acceleration service:
+
+1) Ad hoc analytics.
+2) Workloads with unpredictable data volume per query.
+3) Queries with large scans and selective filters.
+
+https://docs.snowflake.com/en/user-guide/query-acceleration-service#label-query-acceleration-scale-factor
+
+2. B correct - https://docs.snowflake.com/en/user-guide/performance-query-warehouse-qas
+
+3. Answer B is correct 
+https://docs.snowflake.com/en/user-guide/query-acceleration-service
+
+--------------------------------------------------------------------------------------------------------
+
+Question 832
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 832 DISCUSSION
+
+Question:
+How does the search optimization service help Snowflake users improve query performance?
+A. It scans the micro-partitions based on the joins used in the queries and scans only join columns.
+B. It maintains a persistent data structure that keeps track of the values of the table’s columns in each of its micro-partitions.
+C. It scans the local disk cache to avoid scans on the tables used in the query.
+D. It keeps track of running queries and their results and saves those extra scans on the table.
+Show Suggested Answer
+
+Choices:
+1. A. It scans the micro-partitions based on the joins used in the queries and scans only join columns.
+2. B. It maintains a persistent data structure that keeps track of the values of the table’s columns in each of its micro-partitions.
+3. C. It scans the local disk cache to avoid scans on the tables used in the query.
+4. D. It keeps track of running queries and their results and saves those extra scans on the table.
+
+Answers/Comments (2 found):
+1. B Correct .
+
+To improve performance for point lookups, the search optimization service creates and maintains a persistent data structure called a search access path. The search access path keeps track of which values of the table’s columns might be found in each of its micro-partitions, allowing some to be skipped when scanning the table.
+
+https://docs.snowflake.com/en/user-guide/search-optimization-service#how-does-the-search-optimization-service-work
+
+2. B correct - https://docs.snowflake.com/en/user-guide/search-optimization-service
+
+--------------------------------------------------------------------------------------------------------
+
+Question 833
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 833 DISCUSSION
+
+Question:
+What can be done to reduce queueing on a virtual warehouse?
+A. Increase the AUTO_SUSPEND setting for the warehouse.
+B. Change the warehouse to a multi-cluster warehouse.
+C. Increase the warehouse size.
+D. Lower the MAX_CONCURRENCY_LEVEL setting for the warehouse.
+Show Suggested Answer
+
+Choices:
+1. A. Increase the AUTO_SUSPEND setting for the warehouse.
+2. B. Change the warehouse to a multi-cluster warehouse.
+3. C. Increase the warehouse size.
+4. D. Lower the MAX_CONCURRENCY_LEVEL setting for the warehouse.
+
+Answers/Comments (2 found):
+1. https://docs.snowflake.com/en/user-guide/performance-query-warehouse-queue
+
+Options for reducing queues
+You have several options to stop warehouse queuing:
+
+ • For a regular warehouse (i.e. not a multi-cluster warehouse), consider creating additional warehouses, and then distribute the queries among them. If specific queries are causing usage spikes, focus on moving those queries.
+ 
+ • Consider converting a warehouse to a multi-cluster warehouse so the warehouse can elastically provision additional compute resources when demand spikes. Multi-cluster warehouses require the Enterprise Edition of Snowflake.
+ 
+ • If you are already using a multi-cluster warehouse, increase the maximum number of clusters.
+
+2. B correct - https://docs.snowflake.com/en/user-guide/performance-query-warehouse-queue
+
+--------------------------------------------------------------------------------------------------------
+
+Question 834
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 834 DISCUSSION
+
+Question:
+What are characteristics of Snowsight worksheets? (Choose two.)
+A. Worksheets can be grouped under folders, and a folder of folders.
+B. Each worksheet is a unique Snowflake session.
+C. Users are limited to running only one query on a worksheet.
+D. The Snowflake session ends when a user switches worksheets.
+E. Users can import worksheets and share them with other users.
+Show Suggested Answer
+
+Choices:
+1. A. Worksheets can be grouped under folders, and a folder of folders.
+2. B. Each worksheet is a unique Snowflake session.
+3. C. Users are limited to running only one query on a worksheet.
+4. D. The Snowflake session ends when a user switches worksheets.
+5. E. Users can import worksheets and share them with other users.
+
+Answers/Comments (8 found):
+1. According to documentation: 
+You can share worksheets and folders of worksheets with other Snowflake users in your account. 
+Each worksheet is a unique session and can use roles different from the role you select 
+
+A is incorrect because you can't nest folders 
+
+Thus B&E
+
+2. It's B and E.
+
+3. BE
+Each worksheet is a separate session with its own id, which you can see if you run SELECT CURRENT_SESSION(); in each sheet.
+You can import worksheets as described here: https://docs.snowflake.com/en/user-guide/ui-snowsight-worksheets-gs#import-worksheets-from-the-sf-legacy-interface-caps
+You can share them too: https://docs.snowflake.com/en/user-guide/ui-snowsight-worksheets-gs
+
+4. Not A, folders of folders not possible
+B: each worksheet is a unique SF session
+C: running one query at once on a worksheet
+Not D, session holds on
+Not E, import not possible
+
+5. Import is possible: https://docs.snowflake.com/en/user-guide/ui-snowsight-worksheets-gs#import-worksheets-from-the-sf-legacy-interface-caps
+
+6. You cant create folder of folders
+
+7. AB : but not in folder of folder
+
+8. AB correct - https://docs.snowflake.com/en/user-guide/ui-snowsight-worksheets
+
+--------------------------------------------------------------------------------------------------------
+
+Question 835
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 835 DISCUSSION
+
+Question:
+What are reasons for using the VALIDATE function in Snowflake after a COPY INTO command execution? (Choose two.)
+A. To validate the files that have been loaded earlier using the COPY INTO command
+B. To fix errors that were made during the execution of the COPY INTO command
+C. To return errors encountered during the execution of the COPY INTO command
+D. To identify potential issues in the COPY INTO command before it is executed
+E. To count the number of errors encountered during the execution of the COPY INTO command
+Show Suggested Answer
+
+Choices:
+1. A. To validate the files that have been loaded earlier using the COPY INTO command
+2. B. To fix errors that were made during the execution of the COPY INTO command
+3. C. To return errors encountered during the execution of the COPY INTO command
+4. D. To identify potential issues in the COPY INTO command before it is executed
+5. E. To count the number of errors encountered during the execution of the COPY INTO command
+
+Answers/Comments (6 found):
+1. AC correct - https://docs.snowflake.com/en/sql-reference/functions/validate
+
+2. and https://docs.snowflake.com/en/sql-reference/sql/copy-into-table
+
+3. Thanks, easy to confuse this with VALIDATION_MODE option for COPY INTO. This question is about VALIDATE after the COPY INTO
+
+4. A. To validate the files that have been loaded earlier using the COPY INTO command:
+
+This option is incorrect. The VALIDATE function is used to check for errors in the data loading process, not to validate files that have already been loaded.
+
+B. To fix errors that were made during the execution of the COPY INTO command:
+
+This option is incorrect. The VALIDATE function does not fix errors; it only identifies and reports them.
+
+D. To identify potential issues in the COPY INTO command before it is executed:
+
+This option is incorrect. The VALIDATE function is used after the COPY INTO command has been executed to check for errors, not to identify potential issues beforehand.
+
+The correct options are:
+
+C. To return errors encountered during the execution of the COPY INTO command.
+
+E. To count the number of errors encountered during the execution of the COPY INTO command.
+
+5. You confused it, the question is about this command and the first sentence says validating files:
+https://docs.snowflake.com/en/sql-reference/functions/validate
+
+6. I am not sure what validating the files in option A means. When it returns the errors, we can also count the number of errors.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 836
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 836 DISCUSSION
+
+Question:
+Which types of URLs are provided by Snowflake to access unstructured data files? (Choose two).
+A. Absolute URL
+B. Dynamic URL
+C. File URL
+D. Relative URL
+E. Scoped URL
+Show Suggested Answer
+
+Choices:
+1. A. Absolute URL
+2. B. Dynamic URL
+3. C. File URL
+4. D. Relative URL
+5. E. Scoped URL
+
+Answers/Comments (2 found):
+1. CE is correct.
+
+there are 3 URLs
+1-File URL
+2-Scoped URL
+3-Pre-signed URL
+https://docs.snowflake.com/en/user-guide/unstructured-intro#types-of-urls-available-to-access-files
+
+2. CE correct - https://hevodata.com/learn/snowflake-unstructured-data/
+
+--------------------------------------------------------------------------------------------------------
+
+Question 837
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 837 DISCUSSION
+
+Question:
+Which query will return a sample of a table with 1000 rows named testtable, in which each row has a 10% probability of being included in the sample?
+A. select * from testtable sample (0.1);
+B. select * from testtable sample (10);
+C. select * from testtable sample (0.1 rows);
+D. select * from testtable sample (10 rows);
+Show Suggested Answer
+
+Choices:
+1. A. select * from testtable sample (0.1);
+2. B. select * from testtable sample (10);
+3. C. select * from testtable sample (0.1 rows);
+4. D. select * from testtable sample (10 rows);
+
+Answers/Comments (2 found):
+1. B for 10%
+
+2. B correct - https://docs.snowflake.com/en/sql-reference/constructs/sample
+
+--------------------------------------------------------------------------------------------------------
+
+Question 838
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 838 DISCUSSION
+
+Question:
+Which system function can be used to manage access to the data in a share and display certain data only to paying customers?
+A. SYSTEM$ALLOWLIST
+B. SYSTEM$ALLOWLIST_PRIVATELINK
+C. SYSTEM$AUTHORIZE_PRIVATELINK
+D. SYSTEM$IS_LISTING_PURCHASED
+Show Suggested Answer
+
+Choices:
+1. A. SYSTEM$ALLOWLIST
+2. B. SYSTEM$ALLOWLIST_PRIVATELINK
+3. C. SYSTEM$AUTHORIZE_PRIVATELINK
+4. D. SYSTEM$IS_LISTING_PURCHASED
+
+Answers/Comments (2 found):
+1. D is correct
+
+https://other-docs.snowflake.com/en/collaboration/provider-listings-preparing#preparing-shares-for-a-paid-listing
+
+2. correct D - https://other-docs.snowflake.com/en/collaboration/provider-listings-preparing
+
+--------------------------------------------------------------------------------------------------------
+
+Question 839
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 839 DISCUSSION
+
+Question:
+Which Snowflake object does not consume any storage costs?
+A. Secure view
+B. Materialized view
+C. Temporary table
+D. Transient table
+Show Suggested Answer
+
+Choices:
+1. A. Secure view
+2. B. Materialized view
+3. C. Temporary table
+4. D. Transient table
+
+Answers/Comments (2 found):
+1. A. Secure view
+
+2. A correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 840
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 840 DISCUSSION
+
+Question:
+What does the LATERAL modifier for the FLATTEN function do?
+A. Casts the values of the flattened data
+B. Extracts the path of the flattened data
+C. Joins information outside the object with the flattened data
+D. Retrieves a single instance of a repeating element in the flattened data
+Show Suggested Answer
+
+Choices:
+1. A. Casts the values of the flattened data
+2. B. Extracts the path of the flattened data
+3. C. Joins information outside the object with the flattened data
+4. D. Retrieves a single instance of a repeating element in the flattened data
+
+Answers/Comments (2 found):
+1. C. is correct 
+Joins information outside the object with the flattened data
+
+https://docs.snowflake.com/en/user-guide/querying-semistructured#using-the-flatten-function-to-parse-arrays
+
+2. C correct - https://docs.snowflake.com/en/user-guide/querying-semistructured
+
+--------------------------------------------------------------------------------------------------------
+
+Question 841
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 841 DISCUSSION
+
+Question:
+How can a Snowflake user validate data that is unloaded using the COPY INTO [location] command?
+A. Load the data into a CSV file.
+B. Load the data into a relational table.
+C. Use the VALIDATION_MODE = SQL statement.
+D. Use the VALIDATION_MODE = RETURN_ROWS statement.
+Show Suggested Answer
+
+Choices:
+1. A. Load the data into a CSV file.
+2. B. Load the data into a relational table.
+3. C. Use the VALIDATION_MODE = SQL statement.
+4. D. Use the VALIDATION_MODE = RETURN_ROWS statement.
+
+Answers/Comments (2 found):
+1. D is correct
+Use the VALIDATION_MODE = RETURN_ROWS statement.
+https://docs.snowflake.com/en/sql-reference/sql/copy-into-location#optional-parameters
+
+2. D correct - https://community.snowflake.com/s/article/Best-Practices-for-Data-Unloading
+
+--------------------------------------------------------------------------------------------------------
+
+Question 842
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 842 DISCUSSION
+
+Question:
+What role in Snowflake separates the management of users and roles from the management of all grants?
+A. ACCOUNTADMIN
+B. SYSADMIN
+C. SECURITYADMIN
+D. USERADMIN
+Show Suggested Answer
+
+Choices:
+1. A. ACCOUNTADMIN
+2. B. SYSADMIN
+3. C. SECURITYADMIN
+4. D. USERADMIN
+
+Answers/Comments (2 found):
+1. USERADMIN
+
+2. D correct - https://medium.com/snowflake/role-based-access-control-rbac-with-secondary-roles-8ce3c7bb57df
+
+--------------------------------------------------------------------------------------------------------
+
+Question 843
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 843 DISCUSSION
+
+Question:
+Which command will unload data from a table into an external stage?
+A. PUT
+B. INSERT
+C. COPY INTO [location]
+D. GET
+Show Suggested Answer
+
+Choices:
+1. A. PUT
+2. B. INSERT
+3. C. COPY INTO [location]
+4. D. GET
+
+Answers/Comments (1 found):
+1. C correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 844
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 844 DISCUSSION
+
+Question:
+Why is a federated environment used for user authentication in Snowflake?
+A. To enhance data security and privacy
+B. To provide real-time monitoring of user activities
+C. To separate user authentication from user access
+D. To enable direct integration with external databases
+Show Suggested Answer
+
+Choices:
+1. A. To enhance data security and privacy
+2. B. To provide real-time monitoring of user activities
+3. C. To separate user authentication from user access
+4. D. To enable direct integration with external databases
+
+Answers/Comments (2 found):
+1. C is correct 
+In a federated environment, user authentication is separated from user access.
+
+https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-overview#what-is-a-federated-environment
+
+2. C correct - https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-overview
+
+--------------------------------------------------------------------------------------------------------
+
+Question 845
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 845 DISCUSSION
+
+Question:
+What will happen if a Snowflake user increases the size of a suspended virtual warehouse?
+A. The provisioning of new compute resources for the warehouse will begin immediately.
+B. The warehouse will remain suspended but new resources will be added to the query acceleration service.
+C. The provisioning of additional compute resources will be in effect when the warehouse is next resumed.
+D. The warehouse will resume immediately and start to share the compute load with other running virtual warehouses.
+Show Suggested Answer
+
+Choices:
+1. A. The provisioning of new compute resources for the warehouse will begin immediately.
+2. B. The warehouse will remain suspended but new resources will be added to the query acceleration service.
+3. C. The provisioning of additional compute resources will be in effect when the warehouse is next resumed.
+4. D. The warehouse will resume immediately and start to share the compute load with other running virtual warehouses.
+
+Answers/Comments (2 found):
+1. C -> Resizing a suspended warehouse does not provision any new compute resources for the warehouse. It simply instructs Snowflake to provision the additional compute resources when the warehouse is next resumed, at which time all the usage and credit rules associated with starting a warehouse apply.
+
+2. C correct - https://docs.snowflake.com/en/user-guide/warehouses-tasks
+
+--------------------------------------------------------------------------------------------------------
+
+Question 846
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 846 DISCUSSION
+
+Question:
+The VALIDATE table function has which parameter as an input argument for a Snowflake user?
+A. LAST_QUERY_ID
+B. CURRENT_STATEMENT
+C. UUID_STRING
+D. JOB_ID
+Show Suggested Answer
+
+Choices:
+1. A. LAST_QUERY_ID
+2. B. CURRENT_STATEMENT
+3. C. UUID_STRING
+4. D. JOB_ID
+
+Answers/Comments (4 found):
+1. https://docs.snowflake.com/en/sql-reference/functions/validate#syntax
+VALIDATE
+Validates the files loaded in a past execution of the COPY INTO <table> command and returns all the errors encountered during the load, rather than just the first error.
+
+VALIDATE( [<namespace>.]<table_name> , JOB_ID => { '<query_id>' | '_last' } )
+
+2. D correct.
+Job_ID which is query ID
+https://docs.snowflake.com/en/sql-reference/functions/validate#syntax
+
+3. D correct
+
+4. D correct - https://docs.snowflake.com/en/sql-reference/functions/validate
+
+--------------------------------------------------------------------------------------------------------
+
+Question 847
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 847 DISCUSSION
+
+Question:
+Which Snowflake edition supports Protected Health Information (PHI) data (in accordance with HIPAA and HITRUST CSF regulations), and has a dedicated metadata store and pool of compute resources?
+A. Standard
+B. Enterprise
+C. Business Critical
+D. Virtual Private Snowflake (VPS)
+Show Suggested Answer
+
+Choices:
+1. A. Standard
+2. B. Enterprise
+3. C. Business Critical
+4. D. Virtual Private Snowflake (VPS)
+
+Answers/Comments (8 found):
+1. Only VPS edition has dedicated metadata store and pool of computer resources.
+https://docs.snowflake.com/en/user-guide/intro-editions
+
+2. Only VPS offer such option
+
+3. D is ans
+
+4. D correct
+
+5. changed to D
+
+6. C correct - https://docs.snowflake.com/en/user-guide/intro-editions
+
+7. WRONG!! It's D
+
+Same lInk you shared. Business critical doesnt support edicated metadata store and pool of compute resources!
+
+8. I miss info about 'edicated metadata store and pool of compute resources' D is correct
+
+--------------------------------------------------------------------------------------------------------
+

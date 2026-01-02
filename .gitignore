@@ -1,0 +1,33 @@
+# =========================
+# DATASETS (DO NOT PUSH)
+# =========================
+*.csv
+*.json
+*.parquet
+*.tsv
+data/
+datasets/
+
+# =========================
+# MODELS (DO NOT PUSH)
+# =========================
+*.h5
+*.pt
+*.pth
+*.pkl
+*.safetensors
+models/
+checkpoints/
+
+# =========================
+# PYTHON / JUPYTER
+# =========================
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db

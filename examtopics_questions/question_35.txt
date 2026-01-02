@@ -1,0 +1,46 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 35 DISCUSSION
+
+Question:
+True or False: It is possible to load data into Snowflake without creating a named File Format object.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (12 found):
+1. Yes It is possible,A.True
+
+2. A. True
+
+3. A: True is correct Snowflake loads data as CSV by default, but if the file is not CSV, you will have to specify the File Format.
+
+4. A is correct
+
+5. True. Snowflake supports loading data without creating a named File Format object. Snowflake provides built-in file formats that can be used to load data without the need to create a file format object explicitly.
+
+For example, to load a CSV file, you can use the built-in CSV file format by simply specifying the FILE_FORMAT option as CSV in the COPY INTO command. This allows you to quickly load data without the overhead of creating a named file format object.
+
+
+
+
+
+
+Send a message...
+
+6. a is true, you can specify a format but you don't have to
+
+7. https://docs.snowflake.com/en/user-guide/data-load-external-tutorial-create-file-format
+
+8. A is correct
+
+9. As the link suggests: 'In regular use, this step is optional, but is recommended'. Therefore it can be loaded without. I think thats enough proof?
+
+10. table will be loaded with CSV format as default format if there is no file format defined
+
+11. Needs a proof that shows A is correct. Until then I will go with B.
+
+12. A is the correct answer. With a table created we can upload data from a csv file via web UI directly in the table without defining the FILE FORMAT.
+

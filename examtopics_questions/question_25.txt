@@ -1,0 +1,57 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 25 DISCUSSION
+
+Question:
+True or False: Snowflake's data warehouse was built from the ground up for the cloud in lieu of using an existing database or a platform, like Hadoop, as a base.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (18 found):
+1. 'in lieu of' == 'instead of'. Yes, Snowflake was built from the ground up, without using something else as a base. So the statement is true and the answer is A.
+
+2. unsure about this
+
+3. Why is the Correct answer claimed to be False?
+
+4. A is correct
+
+5. True, it's a mix of shared nothing and shared disk.
+
+6. Option B- False- snowflake was not built in lieu of platforms like hadoop
+
+7. B.False
+
+8. correct answer:A
+
+9. **True.**
+
+Snowflake's data warehouse was built from the ground up specifically for the cloud, rather than using an existing database or platform like Hadoop as a base. This design allows Snowflake to leverage the cloud's scalability, elasticity, and performance features, providing a modern data warehousing solution tailored for cloud environments.
+
+10. Snowflake's data warehouse was built from the ground up specifically for the cloud, rather than being based on an existing database or platform like Hadoop. This design allows Snowflake to fully leverage the scalability, elasticity, and performance benefits of cloud infrastructure, offering unique features such as automatic scaling, data sharing, and a multi-cluster architecture.
+A.true
+
+11. b False
+
+12. b False
+
+13. B
+https://docs.snowflake.com/en/user-guide/intro-key-concepts
+
+14. that link says this in the second paragraph: "The Snowflake data platform is not built on any existing database technology or “big data” software platforms such as Hadoop. Instead, Snowflake combines a completely new SQL query engine with an innovative architecture natively designed for the cloud. "
+
+15. in lieu = instead of
+
+16. For sure A
+
+17. A is correct
+
+18. A is true.
+In lieu = instead of 
+The Snowflake data platform is not built on any existing database technology or “big data” software platforms such as Hadoop. Instead, Snowflake combines a completely new SQL query engine with an innovative architecture natively designed for the cloud. 
+
+https://docs.snowflake.com/en/user-guide/intro-key-concepts.html
+

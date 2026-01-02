@@ -1,0 +1,43 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 28 DISCUSSION
+
+Question:
+Which type of table corresponds to a single Snowflake session?
+A. Temporary
+B. Transient
+C. Provisional
+D. Permanent
+Show Suggested Answer
+
+Choices:
+1. A. Temporary
+2. B. Transient
+3. C. Provisional
+4. D. Permanent
+
+Answers/Comments (12 found):
+1. temporary is the signle
+
+2. A.Temporary
+
+3. A is correct.
+https://docs.snowflake.com/en/user-guide/tables-temp-transient
+
+4. A is correct
+
+5. A is correct
+
+6. A is correct
+
+7. Temporary tables are created in a session and they cannot be accessed through different session.
+
+8. Answer is Temporary table.
+
+9. A is correct
+
+10. Temporary tables only exist within the session in which they were created and persist only for the remainder of the session.
+https://docs.snowflake.com/en/user-guide/tables-temp-transient.html#temporary-tables
+
+11. Temporary Tables.
+
+12. Temporary table.
+

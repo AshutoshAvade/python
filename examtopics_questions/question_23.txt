@@ -1,0 +1,61 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 23 DISCUSSION
+
+Question:
+In which layer of its architecture does Snowflake store its metadata statistics?
+A. Storage Layer
+B. Compute Layer
+C. Database Layer
+D. Cloud Services Layer
+Show Suggested Answer
+
+Choices:
+1. A. Storage Layer
+2. B. Compute Layer
+3. C. Database Layer
+4. D. Cloud Services Layer
+
+Answers/Comments (18 found):
+1. cloud services layer is for meta data
+
+2. metadata management is under "cloud services" https://docs.snowflake.com/en/user-guide/intro-key-concepts
+
+3. D.Cloud Service Layer
+
+4. D
+https://docs.snowflake.com/en/user-guide/intro-key-concepts#database-storage
+Snowflake manages all aspects of how this data is stored — the organization, file size, structure, compression, metadata, statistics, and other aspects of data storage are handled by Snowflake. The data objects stored by Snowflake are not directly visible nor accessible by customers; they are only accessible through SQL query operations run using Snowflake.
+
+5. Typo - Answer is C
+
+6. D is correct
+
+7. D is correct
+
+8. D cloud Service Layer
+
+9. D cloud service layer
+
+10. Correct
+
+11. I think option A is correct
+
+12. D Cloud Service Layer
+
+13. D Cloud Service Layer of cause
+
+14. Correct answer should be "C".
+
+https://docs.snowflake.com/en/user-guide/intro-key-concepts
+Database Storage¶
+When data is loaded into Snowflake, Snowflake reorganizes that data into its internal optimized, compressed, columnar format. Snowflake stores this optimized data in cloud storage.
+
+Snowflake manages all aspects of how this data is stored — the organization, file size, structure, compression, metadata, statistics, and other aspects of data storage are handled by Snowflake. The data objects stored by Snowflake are not directly visible nor accessible by customers; they are only accessible through SQL query operations run using Snowflake.
+
+15. D is correct
+
+16. Cloud service layer
+
+17. Cloud Service layer stores metadata of queries for optimization.
+
+18. Metadata manager is part of Cloud Services layer.
+

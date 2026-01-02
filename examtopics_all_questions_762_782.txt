@@ -1,0 +1,765 @@
+Question 762
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 762 DISCUSSION
+
+Question:
+Which object-level parameters can be set to help control query processing and concurrency? (Choose two).
+A. MAX_CONCURRENCY_LEVEL
+B. DATA_RETENTION_TIME_IN_DAYS
+C. MIN_DATA_RETENTION_TIME_IN_DAYS
+D. STATEMENT_TIMEOUT_IN_SECONDS
+E. STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+Show Suggested Answer
+
+Choices:
+1. A. MAX_CONCURRENCY_LEVEL
+2. B. DATA_RETENTION_TIME_IN_DAYS
+3. C. MIN_DATA_RETENTION_TIME_IN_DAYS
+4. D. STATEMENT_TIMEOUT_IN_SECONDS
+5. E. STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+
+Answers/Comments (11 found):
+1. D correct - Snowflake provides some object-level parameters that can be set to help control query processing and concurrency:
+
+ STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+
+ STATEMENT_TIMEOUT_IN_SECONDS
+
+https://docs.snowflake.com/en/user-guide/warehouses-overview
+
+2. Thanks for providing the Direct quote; your comment should be at the top of the discussion.
+
+3. The information about the object-level parameters that can be set to help control query processing and concurrency in Snowflake can be found in the Snowflake documentation. Specifically, the MAX_CONCURRENCY_LEVEL and STATEMENT_QUEUED_TIMEOUT_IN_SECONDS parameters are used to manage query processing and concurrency.
+
+4. Sorry, but this time, Heetec is absolutely right: I identified the questions body and the phrase he mentioned, exactly in the docs.snowflake, at the link he sent to us
+
+5. Query processing and concurrency¶
+The number of queries that a warehouse can concurrently process is determined by the size and complexity of each query. As queries are submitted, the warehouse calculates and reserves the compute resources needed to process each query. If the warehouse does not have enough remaining resources to process a query, the query is queued, pending resources that become available as other running queries complete.
+
+Snowflake provides some object-level parameters that can be set to help control query processing and concurrency:
+
+STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+
+STATEMENT_TIMEOUT_IN_SECONDS
+
+6. Snowflake provides some object-level parameters that can be set to help control query processing and concurrency:
+STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+STATEMENT_TIMEOUT_IN_SECONDS
+
+7. Statements A and E are correct:
+https://docs.snowflake.com/en/sql-reference/parameters#statement-queued-timeout-in-seconds
+STATEMENT_QUEUED_TIMEOUT_IN_SECONDS
+Amount of time, in seconds, a SQL statement (query, DDL, DML, etc.) remains queued for a warehouse before it is canceled by the system. This parameter can be used in conjunction with the MAX_CONCURRENCY_LEVEL parameter to ensure a warehouse is never backlogged.
+
+8. In my opinion ADE are correct. The question should be more specific.
+If I had to choose, I would choose AD
+A for increasing/decreasing number of concurrent queries 
+D for increasing the processing time
+
+9. MAX_CONCURRENCY_LEVEL parameter to limit the number of concurrent queries running in a warehouse.
+Amount of time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system.
+A,D
+
+10. STATEMENT_TIMEOUT_IN_SECONDS: 
+Amount of time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system.
+
+STATEMENT_QUEUED_TIMEOUT_IN_SECONDS: Amount of time, in seconds, a SQL statement (query, DDL, DML, etc.) remains queued for a warehouse before it is canceled by the system. This parameter can be used in conjunction with the MAX_CONCURRENCY_LEVEL parameter to ensure a warehouse is never backlogged.
+
+11. correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 763
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 763 DISCUSSION
+
+Question:
+What metadata does Snowflake store for rows in micro-partitions? (Choose two.)
+A. Range of values
+B. Distinct values
+C. Index values
+D. Sorted values
+E. Null values
+Show Suggested Answer
+
+Choices:
+1. A. Range of values
+2. B. Distinct values
+3. C. Index values
+4. D. Sorted values
+5. E. Null values
+
+Answers/Comments (2 found):
+1. correct
+
+2. AB correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 764
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 764 DISCUSSION
+
+Question:
+What are valid sub-clauses to the OVER clause for a window function? (Choose two.)
+A. GROUP BY
+B. LIMIT
+C. ORDER BY
+D. PARTITION BY
+E. UNION ALL
+Show Suggested Answer
+
+Choices:
+1. A. GROUP BY
+2. B. LIMIT
+3. C. ORDER BY
+4. D. PARTITION BY
+5. E. UNION ALL
+
+Answers/Comments (4 found):
+1. SELECT menu_category, menu_price_usd, menu_cogs_usd,
+ AVG(menu_cogs_usd) OVER(PARTITION BY menu_category ORDER BY menu_price_usd ROWS BETWEEN CURRENT ROW and 2 FOLLOWING) avg_cogs
+ FROM menu_items
+ ORDER BY menu_category, menu_price_usd;
+
+2. Similarly to standard SQL syntax - C and D
+
+3. CD correct
+
+4. CD correct - syntax <function> ([ <arguments> ]) OVER ([ PARTITION BY <expr1> ] [ ORDER BY <expr2> ])
+
+--------------------------------------------------------------------------------------------------------
+
+Question 765
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 765 DISCUSSION
+
+Question:
+Which kind of Snowflake table stores file-level metadata for each file in a stage?
+A. Directory
+B. External
+C. Temporary
+D. Transient
+Show Suggested Answer
+
+Choices:
+1. A. Directory
+2. B. External
+3. C. Temporary
+4. D. Transient
+
+Answers/Comments (1 found):
+1. Correct A - The kind of Snowflake table that stores file-level metadata for each file in a stage is called a directory table
+
+https://docs.snowflake.com/en/user-guide/data-load-dirtables
+
+--------------------------------------------------------------------------------------------------------
+
+Question 766
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 766 DISCUSSION
+
+Question:
+Which privileges apply to stored procedures? (Choose two.)
+A. MODIFY
+B. MONITOR
+C. OPERATE
+D. OWNERSHIP
+E. USAGE
+Show Suggested Answer
+
+Choices:
+1. A. MODIFY
+2. B. MONITOR
+3. C. OPERATE
+4. D. OWNERSHIP
+5. E. USAGE
+
+Answers/Comments (2 found):
+1. Privileges on Stored Procedures
+Similar to other database objects (tables, views, UDFs, etc.), stored procedures are owned by a role and have one or more privileges that can be granted to other roles.
+
+Currently, the following privileges apply to stored procedures:
+
+USAGE
+
+OWNERSHIP
+
+For a role to use a stored procedure, the role must either be the owner or have been granted USAGE privilege on the stored procedure.
+
+2. USAGE
+
+Enables calling a stored procedure.
+
+ALL [ PRIVILEGES ]
+
+Grants all privileges, except OWNERSHIP, on the stored procedure.
+
+OWNERSHIP
+
+Grants full control over the stored procedure; required to alter the stored procedure. Only a single role can hold this privilege on a specific object at a time. Note that in a managed access schema, only the schema owner (i.e. the role with the OWNERSHIP privilege on the schema) or a role with the MANAGE GRANTS privilege can grant or revoke privileges on objects in the schema, including future grants.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 767
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 767 DISCUSSION
+
+Question:
+What column type does a Kafka connector store formatted information in a single column?
+A. ARRAY
+B. OBJECT
+C. VARCHAR
+D. VARIANT
+Show Suggested Answer
+
+Choices:
+1. A. ARRAY
+2. B. OBJECT
+3. C. VARCHAR
+4. D. VARIANT
+
+Answers/Comments (2 found):
+1. correct
+
+2. D correct
+
+https://docs.snowflake.com/en/user-guide/kafka-connector-overview
+
+--------------------------------------------------------------------------------------------------------
+
+Question 768
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 768 DISCUSSION
+
+Question:
+If a size Small virtual warehouse costs two credits per hour, what is the credit cost per hour of a size Large virtual warehouse?
+A. 4
+B. 8
+C. 16
+D. 32
+Show Suggested Answer
+
+Choices:
+1. A. 4
+2. B. 8
+3. C. 16
+4. D. 32
+
+Answers/Comments (1 found):
+1. B. correct
+small = 2
+m = 4
+l = 8
+
+--------------------------------------------------------------------------------------------------------
+
+Question 769
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 769 DISCUSSION
+
+Question:
+Which SQL command will list the files in a named stage?
+A. list @~;
+B. get @%mytable;
+C. list @my_stage;
+D. get @my_stage;
+Show Suggested Answer
+
+Choices:
+1. A. list @~;
+2. B. get @%mytable;
+3. C. list @my_stage;
+4. D. get @my_stage;
+
+Answers/Comments (1 found):
+1. correct C 
+
+To list files that have been uploaded to a Snowflake stage, you can use the LIST command
+
+C correct - @~ is used only when you shortcut even list command, so "ls @~" should work as well
+
+--------------------------------------------------------------------------------------------------------
+
+Question 770
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 770 DISCUSSION
+
+Question:
+What is the effect of configuring a virtual warehouse auto-suspend value to ‘0’?
+A. The warehouse will never suspend.
+B. The warehouse will suspend immediately upon work completion.
+C. The warehouse will not resume automatically.
+D. All clusters in the multi-cluster warehouse will resume immediately.
+Show Suggested Answer
+
+Choices:
+1. A. The warehouse will never suspend.
+2. B. The warehouse will suspend immediately upon work completion.
+3. C. The warehouse will not resume automatically.
+4. D. All clusters in the multi-cluster warehouse will resume immediately.
+
+Answers/Comments (3 found):
+1. https://docs.snowflake.com/en/sql-reference/sql/alter-warehouse#AUTO_SUSPEND
+Check AUTO_SUSPEND section.
+
+2. correct
+
+3. A correct - Valid values
+
+ Any integer 0 or greater, or NULL:
+
+ Setting a value less than 60 is allowed, but might not result in the desired/expected behavior because the background process that suspends a warehouse runs approximately every 60 seconds and, therefore, is not intended for enabling exact control over warehouse suspension.
+
+ Setting a 0 or NULL value means the warehouse never suspends.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 771
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 771 DISCUSSION
+
+Question:
+Which data types can be used in Snowflake to store semi-structured data? (Choose two.)
+A. ARRAY
+B. BLOB
+C. CLOB
+D. JSON
+E. VARIANT
+Show Suggested Answer
+
+Choices:
+1. A. ARRAY
+2. B. BLOB
+3. C. CLOB
+4. D. JSON
+5. E. VARIANT
+
+Answers/Comments (5 found):
+1. AE 
+https://docs.snowflake.com/en/sql-reference/data-types-semistructured
+
+2. Why not JSON and Variant?
+
+3. JSON is file type, not Data type
+
+4. correct
+
+5. AE correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 772
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 772 DISCUSSION
+
+Question:
+While attempting to avoid data duplication, which COPY INTO [location] option should be used to load files with expired load metadata?
+A. LOAD_UNCERTAIN_FILES
+B. FORCE
+C. VALIDATION_MODE
+D. LAST_MODIFIED
+Show Suggested Answer
+
+Choices:
+1. A. LOAD_UNCERTAIN_FILES
+2. B. FORCE
+3. C. VALIDATION_MODE
+4. D. LAST_MODIFIED
+
+Answers/Comments (8 found):
+1. To load files whose metadata has expired, set the LOAD_UNCERTAIN_FILES copy option to true. The copy option references load metadata, if available, to avoid data duplication, but also attempts to load files with expired load metadata.
+
+2. To load files whose metadata has expired, set the LOAD_UNCERTAIN_FILES copy option to true. The copy option references load metadata, if available, to avoid data duplication, but also attempts to load files with expired load metadata.
+
+Alternatively, set the FORCE option to load all files, ignoring load metadata if it exists. Note that this option reloads files, potentially duplicating data in a table.
+
+3. A is correct
+
+4. Answer is A
+
+5. A correct - https://docs.snowflake.com/en/user-guide/data-load-considerations-load
+
+6. B correct - Boolean that specifies to load all files, regardless of whether they’ve been loaded previously and have not changed since they were loaded. Note that this option reloads files, potentially duplicating data in a table.
+
+https://docs.snowflake.com/en/sql-reference/sql/copy-into-table
+
+7. wrong - it will create dups
+
+Alternatively, set the FORCE option to load all files, ignoring load metadata if it exists. Note that this option reloads files, potentially duplicating data in a table.
+
+8. sorry, found it https://docs.snowflake.com/en/user-guide/data-load-considerations-load
+A correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 773
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 773 DISCUSSION
+
+Question:
+What service is provided as an integrated Snowflake feature to enhance Multi-Factor Authentication (MFA) support?
+A. Duo Security
+B. OAuth
+C. Okta
+D. Single Sign-On (SSO)
+Show Suggested Answer
+
+Choices:
+1. A. Duo Security
+2. B. OAuth
+3. C. Okta
+4. D. Single Sign-On (SSO)
+
+Answers/Comments (3 found):
+1. A is correct
+
+2. correct
+
+3. A correct - MFA provides increased login security for users connecting to Snowflake. MFA support is provided as an integrated Snowflake feature, powered by the Duo Security service, which is managed completely by Snowflake.
+
+https://docs.snowflake.com/en/user-guide/ui-snowsight-profile
+
+--------------------------------------------------------------------------------------------------------
+
+Question 774
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 774 DISCUSSION
+
+Question:
+What is the impact on queries that are being executed when a resource monitor set to the “Notify & Suspend” threshold level is exceeded?
+A. All statements being executed are queued.
+B. All statements being executed are restarted.
+C. All statements being executed are cancelled.
+D. All statements being executed are completed.
+Show Suggested Answer
+
+Choices:
+1. A. All statements being executed are queued.
+2. B. All statements being executed are restarted.
+3. C. All statements being executed are cancelled.
+4. D. All statements being executed are completed.
+
+Answers/Comments (5 found):
+1. D is correct
+
+Reference: https://docs.snowflake.com/en/user-guide/resource-monitors
+
+2. correct
+
+3. D correct - Notify & Suspend
+
+ Send a notification (to all account administrators with notifications enabled) and suspend all assigned warehouses after all statements being executed by the warehouse(s) have completed.
+Notify & Suspend Immediately
+
+ Send a notification (to all account administrators with notifications enabled) and suspend all assigned warehouses immediately, which cancels any statements being executed by the warehouses at the time.
+
+4. Notify & Suspend
+Send a notification (to all account administrators with notifications enabled) and suspend all assigned warehouses after all statements being executed by the warehouse(s) have completed.
+
+Notify & Suspend Immediately
+Send a notification (to all account administrators with notifications enabled) and suspend all assigned warehouses immediately, which cancels any statements being executed by the warehouses at the time.
+
+Notify
+Perform no action, but send an alert notification (to all account administrators with notifications enabled).
+
+5. Correct answer is D
+https://docs.snowflake.com/en/user-guide/resource-monitors
+Notify
+Notify&Suspend
+Notify and suspend immediately where the running queries are cancelled
+
+--------------------------------------------------------------------------------------------------------
+
+Question 775
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 775 DISCUSSION
+
+Question:
+What tasks can an account administrator perform in the Data Exchange? (Choose two.)
+A. Add and remove members.
+B. Delete data categories.
+C. Approve and deny listing approval requests.
+D. Transfer listing ownership.
+E. Transfer ownership of a provider profile.
+Show Suggested Answer
+
+Choices:
+1. A. Add and remove members.
+2. B. Delete data categories.
+3. C. Approve and deny listing approval requests.
+4. D. Transfer listing ownership.
+5. E. Transfer ownership of a provider profile.
+
+Answers/Comments (3 found):
+1. AC correct 
+By default, only an account administrator (a user with the ACCOUNTADMIN role) in the Data Exchange administrator account can manage a Data Exchange, which includes the following tasks: Add or remove members. Approve or deny listing approval requests. Approve or deny provider profile approval requests.
+
+docs.snowflake.com/en/user-guide/data-exchange-marketplace-privileges
+
+2. They can also "show categories"
+
+3. Add or remove members. 
+Approve or deny listing approval requests. 
+Approve or deny provider profile approval requests.
+
+--------------------------------------------------------------------------------------------------------
+
+Question 776
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 776 DISCUSSION
+
+Question:
+Which types of subqueries does Snowflake support? (Choose two.)
+A. Uncorrelated scalar subqueries in WHERE clauses
+B. Uncorrelated scalar subqueries in any place that a value expression can be used
+C. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be uncorrelated only
+D. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be correlated only
+E. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be correlated or uncorrelated
+Show Suggested Answer
+
+Choices:
+1. A. Uncorrelated scalar subqueries in WHERE clauses
+2. B. Uncorrelated scalar subqueries in any place that a value expression can be used
+3. C. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be uncorrelated only
+4. D. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be correlated only
+5. E. EXISTS, ANY / ALL, and IN subqueries in WHERE clauses: these subqueries can be correlated or uncorrelated
+
+Answers/Comments (3 found):
+1. correct
+
+2. BE correct
+
+Snowflake currently supports the following types of subqueries:
+
+ Uncorrelated scalar subqueries in any place that a value expression can be used.
+
+ Correlated scalar subqueries in WHERE clauses.
+
+ EXISTS, ANY / ALL, and IN subqueries in WHERE clauses. These subqueries can be correlated or uncorrelated.
+
+https://docs.snowflake.com/en/user-guide/querying-subqueries
+
+3. Correct ans BE
+https://docs.snowflake.com/en/user-guide/querying-subqueries
+
+--------------------------------------------------------------------------------------------------------
+
+Question 777
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 777 DISCUSSION
+
+Question:
+How can network and private connectivity security be managed in Snowflake?
+A. By setting up network policies with IPv4 IP addresses
+B. By putting the Snowflake URL on the allowed list for get method responses
+C. By manually setting up vulnerability patch management policies
+D. By manually setting up an Intrusion Prevention System (IPS) on each account
+Show Suggested Answer
+
+Choices:
+1. A. By setting up network policies with IPv4 IP addresses
+2. B. By putting the Snowflake URL on the allowed list for get method responses
+3. C. By manually setting up vulnerability patch management policies
+4. D. By manually setting up an Intrusion Prevention System (IPS) on each account
+
+Answers/Comments (2 found):
+1. Network and private connectivity security in Snowflake can be managed by setting up network policies with IPv4 IP addresses.
+
+2. correct
+
+--------------------------------------------------------------------------------------------------------
+
+Question 778
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 778 DISCUSSION
+
+Question:
+What consideration should be made when loading data into Snowflake?
+A. Create small data files and stage them in cloud storage frequently.
+B. Create large data files to maximize the processing overhead for each file.
+C. The number of load operations that run in parallel can exceed the number of data files to be loaded.
+D. The number of data files that are processed in parallel is determined by the virtual warehouse.
+Show Suggested Answer
+
+Choices:
+1. A. Create small data files and stage them in cloud storage frequently.
+2. B. Create large data files to maximize the processing overhead for each file.
+3. C. The number of load operations that run in parallel can exceed the number of data files to be loaded.
+4. D. The number of data files that are processed in parallel is determined by the virtual warehouse.
+
+Answers/Comments (6 found):
+1. Answer: D
+When loading data into Snowflake, the number of data files processed in parallel is limited by the size and compute capacity of the virtual warehouse being used. Larger warehouses can process more files in parallel, enabling faster data loading.
+
+Why not A?
+Snowflake recommends moderately sized files (100 MB to 1 GB compressed) to maximize performance and efficiency. Creating very small files leads to high overhead due to metadata management and increases processing time.
+
+Key Snowflake Best Practices for Data Loading:
+
+1. Optimize File Size: Use file sizes between 100 MB and 1 GB (compressed) for efficient parallel loading.
+
+
+2. Utilize Virtual Warehouse Scaling: Use larger virtual warehouses to increase parallelism and processing capacity.
+
+
+3. Batch Data: Minimize small file uploads; batch files into recommended sizes before staging.
+
+2. Agree w A
+
+3. D
+The number of data files that can be processed in parallel is determined by the amount of compute resources in a warehouse. 
+https://docs.snowflake.com/en/user-guide/data-load-considerations-plan
+
+4. ... Unless you are bulk loading a large number of files concurrently (i.e. hundreds or thousands of files), a smaller warehouse (Small, Medium, Large) is generally sufficient. Using a larger warehouse (X-Large, 2X-Large, etc.) will consume more credits and may not result in any performance increase.
+
+I think it is A
+
+5. agree, D
+
+6. D probably
+
+--------------------------------------------------------------------------------------------------------
+
+Question 779
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 779 DISCUSSION
+
+Question:
+How can a user improve the performance of a single large complex query in Snowflake?
+A. Scale up the virtual warehouse.
+B. Scale out the virtual warehouse.
+C. Enable standard warehouse scaling.
+D. Enable economy warehouse scaling.
+Show Suggested Answer
+
+Choices:
+1. A. Scale up the virtual warehouse.
+2. B. Scale out the virtual warehouse.
+3. C. Enable standard warehouse scaling.
+4. D. Enable economy warehouse scaling.
+
+Answers/Comments (7 found):
+1. We don't have information about Snowflake edition hence multi-cluster options couldn't be available to us
+
+2. A
+Scaling up is for improving speed of a single complex query. 
+Scaling out is for solving concurrency issues (queueing of many queries)
+Resizing a warehouse generally improves query performance, particularly for larger, more complex queries. It can also help reduce the queuing that occurs if a warehouse does not have enough compute resources to process all the queries that are submitted concurrently. Note that warehouse resizing is not intended for handling concurrency issues; instead, use additional warehouses to handle the workload or use a multi-cluster warehouse (if this feature is available for your account).
+https://docs.snowflake.com/en/user-guide/warehouses-considerations
+
+3. C correct - https://docs.snowflake.com/en/user-guide/warehouses-multicluster
+
+4. I thin it's A, because scale out is for handle concurrency. scale up is for handle large and complex query
+
+5. yep, it seems you have right, so really A i think
+
+6. A correct - https://dzone.com/articles/snowflake-performance-tuning-top-5-best-practices
+
+7. changed to C
+
+--------------------------------------------------------------------------------------------------------
+
+Question 780
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 780 DISCUSSION
+
+Question:
+Who can access a referenced file through a scoped URL?
+A. Only the ACCOUNTADMIN
+B. Only the user who generates the URL
+C. Any role specified in the GET REST API call with sufficient privileges
+D. Any user specified in the GET REST API call with sufficient privileges
+Show Suggested Answer
+
+Choices:
+1. A. Only the ACCOUNTADMIN
+2. B. Only the user who generates the URL
+3. C. Any role specified in the GET REST API call with sufficient privileges
+4. D. Any user specified in the GET REST API call with sufficient privileges
+
+Answers/Comments (7 found):
+1. Only the user who generates a scoped URL can use the URL to access the referenced file.
+
+2. B
+https://docs.snowflake.com/en/user-guide/unstructured-intro#types-of-urls-available-to-access-files
+Only the user who generates a scoped URL can use the URL to access the referenced file.
+
+3. Scoped URL
+Only the user who generated the scoped URL can use the URL to access the referenced file.
+
+File URL
+Any role that has sufficient privileges on the stage can access the file:
+
+External stage: USAGE
+
+Internal stage: READ
+
+4. B correct
+
+5. C. Scoped URL : Only roles that have privileges on the view can access the files.
+
+6. change to B, agree with Heetec
+
+7. B correct - 
+
+ Only the user who generated the scoped URL can use the URL to access the referenced file.
+
+https://docs.snowflake.com/en/user-guide/data-load-unstructured-rest-api
+
+--------------------------------------------------------------------------------------------------------
+
+Question 781
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 781 DISCUSSION
+
+Question:
+Snowflake will return an error when a user attempts to share which object?
+A. Tables
+B. Secure views
+C. Standard views
+D. Secure materialized views
+Show Suggested Answer
+
+Choices:
+1. A. Tables
+2. B. Secure views
+3. C. Standard views
+4. D. Secure materialized views
+
+Answers/Comments (7 found):
+1. C is correct, please find Snowflake doc link: https://docs.snowflake.com/en/user-guide/data-sharing-provider
+
+2. C correct
+
+3. C
+ You can share the following Snowflake database objects:
+
+External tables
+Dynamic tables
+Secure views
+Secure materialized views
+Secure UDFs
+Tables
+
+https://docs.snowflake.com/en/user-guide/data-sharing-intro
+
+4. Should use secure views for that
+
+5. C correct
+
+6. A correct - For data security and privacy reasons, only secure views are supported in shares at this time. If a standard view is added to a share, Snowflake returns an error
+
+https://docs.snowflake.com/en/user-guide/data-sharing-provider
+
+7. C correct - typo
+
+--------------------------------------------------------------------------------------------------------
+
+Question 782
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 782 DISCUSSION
+
+Question:
+What setting in Snowsight determines the databases, tables, and other objects that can be seen and the actions that can be performed on them?
+A. Active role
+B. Masking policy
+C. Column-level security
+D. Multi-Factor Authentication (MFA)
+Show Suggested Answer
+
+Choices:
+1. A. Active role
+2. B. Masking policy
+3. C. Column-level security
+4. D. Multi-Factor Authentication (MFA)
+
+Answers/Comments (2 found):
+1. Switch your active role:
+While using Snowsight, you can change the active role in your current session. Your active role determines which pages in Snowsight you can access, as well as which databases, tables, and other objects you can see and the actions you can perform on them.
+
+2. A correct
+
+https://docs.snowflake.com/en/user-guide/ui-snowsight-gs#:~:text=While%20using%20Snowsight%2C%20you%20can%20change%20the%20active,and%20the%20actions%20you%20can%20perform%20on%20them.
+
+--------------------------------------------------------------------------------------------------------
+

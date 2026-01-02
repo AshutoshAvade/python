@@ -1,0 +1,45 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 36 DISCUSSION
+
+Question:
+True or False: A table in Snowflake can only be queried using the Virtual Warehouse that was used to load the data.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (16 found):
+1. In Snowflake, tables can be queried using any Virtual Warehouse within the same account, not just the one used to load the data. This flexibility is due to Snowflake's architecture, which separates storage and compute resources.
+
+2. while this is false, I don't think the question is asking about whether you can get to the result cache. I think the point is, access to databases, schemas and tables is managed via grants.
+
+3. B is correct. We can get data from the result cache in the cloud service layer, without a virtual warehouse.
+
+4. b.False
+
+5. B.False
+
+6. a multi cluster, any warehouse can get the data
+
+7. B for sure
+
+8. B is correct
+
+9. B is correct. you can query cached data without having virtual warehouse running
+
+10. B is correct
+
+11. B - correct
+
+12. B is correct
+
+13. No Doubt . B is correct.
+
+14. Answer is B
+
+15. Ofcourse B :)
+
+16. Answer is B
+

@@ -1,0 +1,46 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 24 DISCUSSION
+
+Question:
+True or False: Data in fail-safe can be deleted by a user or the Snowflake team before it expires.
+A. True
+B. False
+Show Suggested Answer
+
+Choices:
+1. A. True
+2. B. False
+
+Answers/Comments (15 found):
+1. cannot be delete
+
+2. no user action provide
+
+3. Fail-safe provides a (non-configurable) 7-day period during which historical data may be recoverable by Snowflake. No user operations allowed.
+
+https://docs.snowflake.com/en/user-guide/data-failsafe
+
+4. The User can't have access to Fail Safe,Snowflake Manage the Fail-safe
+
+5. Answer is B as user doesn't have access/control to modify fail-safe.
+
+6. b false
+
+7. user does not have control or access over fail-safe
+
+8. Correct
+
+9. Answer is B as user doesn't have access/control to modify fail-safe.
+
+10. B is correct
+
+11. B is correct
+
+12. Failsafe manages by Snowflake support only
+
+13. Fail Safe can not be configured.
+Users, neither retrieve nor delete the data of fail safe.
+
+14. Answer is B. Failsafe manages by Snowflake support not user.
+
+15. It doesn't make sense for user to remove date in fail-safe, B is correct
+

@@ -1,0 +1,45 @@
+Title: EXAM SNOWPRO CORE TOPIC 1 QUESTION 38 DISCUSSION
+
+Question:
+Which statements are true of micro-partitions? (Choose two.)
+A. They are approximately 16MB in size
+B. They are stored compressed only if COMPRESS=TRUE on Table
+C. They are immutable
+D. They are only encrypted in the Enterprise edition and above
+Show Suggested Answer
+
+Choices:
+1. A. They are approximately 16MB in size
+2. B. They are stored compressed only if COMPRESS=TRUE on Table
+3. C. They are immutable
+4. D. They are only encrypted in the Enterprise edition and above
+
+Answers/Comments (12 found):
+1. - micro-partitions are small in size (50 to 500 MB, before compression) - 16 MB must comes from old version/question
+- COMPRESSION = NONE is the right
+
+2. Your answer was a little unclear to me. Uncompressed the data of a micro partition would be around 50-500 MB, while compressed it is around 16 MB.
+
+Second answer is that these micro partitions are immutable
+
+3. A and C are Correct.after loading into the table the data would be compressed.
+
+4. A and C are correct
+
+5. AC are correct
+
+6. I believe A and C are correct.
+
+7. The size of 50-500MB is for uncompressed data and micropartition itself holds around 16MB(after compression).
+https://stackoverflow.com/questions/67945427/clarification-on-the-snowflake-micro-partition-size
+
+8. AC are correct
+
+9. AC correct
+
+10. A and C. They are approximately 16MB in size and also immutable.
+
+11. 16 MB compressed
+
+12. Answer is correct
+
