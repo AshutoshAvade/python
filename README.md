@@ -20,7 +20,7 @@ Each folder represents an independent concept or project:
 - chatbot/ – NLP & chatbot implementations
 - project-new/ – End-to-end ML projects
 - time-series/ – Time series forecasting
-- clustering, regression, classification – ML algorithms
+- clustering, regression, classification – Core ML algorithms
 
 ---
 
@@ -35,3 +35,12 @@ Each folder represents an independent concept or project:
 3. Place the dataset inside the `data/` folder
 
 ### Example
+
+```bash
+upi-fraud-detection/
+│
+├── data/
+│   └── upi_transactions.csv   # downloaded locally
+├── fraud_detection.ipynb
+├── model.py
+└── README.md
