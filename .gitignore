@@ -7,6 +7,12 @@
 *.tsv
 data/
 datasets/
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.jfif
 
 # =========================
 # MODELS (DO NOT PUSH)
@@ -31,3 +37,5 @@ __pycache__/
 # =========================
 .DS_Store
 Thumbs.db
+*.log
+*.tmp 
